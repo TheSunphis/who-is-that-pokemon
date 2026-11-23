@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Generate paired revealed/black-silhouette quiz images from a PokeAPI regional Pokédex.
+"""Generate paired revealed/black-silhouette quiz images from PokeAPI regional Pokédexes.
 
-The Alola run uses PokeAPI's ``updated-alola`` Pokédex and expands every listed species to all
-PokeAPI varieties, so regional forms and Ultra Necrozma are included. Network and image work runs
-concurrently; PokeAPI responses and sprites are cached under ``.cache/`` for repeatable reruns.
+Each regional collection expands its Pokédex species to all PokeAPI varieties. Split and DLC
+Pokédexes are combined where relevant, so forms such as Ultra Necrozma are included. Network and
+image work runs concurrently; PokeAPI responses and sprites are cached under ``.cache/``.
 
 Dependencies: pip install pillow opencv-python numpy
-Example: python3 scripts/generate_region.py --region alola --template assets/quiz-template.jpg
+Examples:
+  python3 scripts/generate_region.py --region alola --template assets/quiz-template.jpg
+  python3 scripts/generate_region.py --region all --workers 20
 """
 from __future__ import annotations
 
@@ -29,9 +31,20 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / ".cache" / "pokeapi"
 USER_AGENT = "WhoIsThatPokemon/0.1 (PokeAPI client)"
-POKEDEXES = {"alola": "updated-alola"}
-REGIONS = ("kanto", "johto", "hoenn", "sinnoh", "unova", "kalos", "alola",
-           "galar", "hisui", "paldea")
+REGION_POKEDEXES = {
+    "kanto": ("kanto", "letsgo-kanto"),
+    "johto": ("updated-johto",),
+    "hoenn": ("updated-hoenn",),
+    "sinnoh": ("extended-sinnoh",),
+    "unova": ("updated-unova",),
+    "kalos": ("kalos-central", "kalos-coastal", "kalos-mountain",
+              "lumiose-city", "hyperspace"),
+    "alola": ("updated-alola",),
+    "galar": ("galar", "isle-of-armor", "crown-tundra"),
+    "hisui": ("hisui",),
+    "paldea": ("paldea", "kitakami", "blueberry"),
+}
+REGIONS = tuple(REGION_POKEDEXES)
 MAX_ARTWORK_BOX = (222, 188)
 ARTWORK_CENTER = (138, 128)
 
@@ -298,7 +311,12 @@ def _generate_form(form: dict, background: Image.Image, reveal_background: Image
     details = _pokemon_details(form, refresh=refresh)
     sprite_url = pokemon_art_url(details)
     if not sprite_url:
-        return {**form, "status": "missing_sprite", "sprite_url": None}
+        return {
+            **form,
+            "status": "missing_sprite",
+            "sprite_url": None,
+            "missing_reason": "PokeAPI provides no artwork or sprite URL for this form.",
+        }
     raw = get_bytes(sprite_url, refresh=refresh)
     artwork = Image.open(BytesIO(raw)).convert("RGBA")
     stem = slug(name)
@@ -316,29 +334,42 @@ def _generate_form(form: dict, background: Image.Image, reveal_background: Image
     }
 
 
-def list_forms(region: str, *, workers: int, refresh: bool) -> tuple[dict, list[dict]]:
-    pokedex_name = POKEDEXES.get(region)
-    if pokedex_name is None:
-        raise ValueError(f"Region {region!r} is not configured yet; currently supported: alola.")
-    pokedex = get_json(f"https://pokeapi.co/api/v2/pokedex/{pokedex_name}/", refresh=refresh)
-    species_entries = pokedex["pokemon_entries"]
-    ordered_entries = sorted(species_entries, key=lambda row: row["entry_number"])
+def list_forms(region: str, *, workers: int, refresh: bool) -> tuple[list[dict], list[dict]]:
+    pokedex_names = REGION_POKEDEXES.get(region)
+    if pokedex_names is None:
+        raise ValueError(f"Region {region!r} is not configured; choose one of {REGIONS}.")
+    pokedexes = [
+        get_json(f"https://pokeapi.co/api/v2/pokedex/{name}/", refresh=refresh)
+        for name in pokedex_names
+    ]
 
-    def fetch_species(entry: dict) -> tuple[int, str, dict]:
-        species = entry["pokemon_species"]
-        record = get_json(species["url"], refresh=refresh)
-        return entry["entry_number"], species["name"], record
+    # Merge split/DLC dexes without counting the same species more than once. If a species
+    # appears in more than one dex, retain its first regional entry as the canonical number.
+    unique_entries = {}
+    for dex_order, pokedex in enumerate(pokedexes):
+        for entry in sorted(pokedex["pokemon_entries"], key=lambda row: row["entry_number"]):
+            species = entry["pokemon_species"]
+            unique_entries.setdefault(species["name"], (
+                dex_order, pokedex["name"], entry["entry_number"], species["url"]))
+    ordered_entries = sorted(
+        ((species_name, *details) for species_name, details in unique_entries.items()),
+        key=lambda row: (row[1], row[3], row[0]))
+
+    def fetch_species(entry: tuple[str, int, str, int, str]) -> tuple[int, str, str, dict]:
+        species_name, _dex_order, pokedex_name, dex_number, species_url = entry
+        record = get_json(species_url, refresh=refresh)
+        return dex_number, pokedex_name, species_name, record
 
     species_data = []
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = [executor.submit(fetch_species, entry) for entry in ordered_entries]
         for future in as_completed(futures):
             species_data.append(future.result())
-    species_data.sort(key=lambda item: item[0])
+    species_data.sort(key=lambda item: (pokedex_names.index(item[1]), item[0], item[2]))
 
     forms = []
     seen = set()
-    for dex_number, species_name, record in species_data:
+    for dex_number, pokedex_name, species_name, record in species_data:
         species_label = _english_name(record, species_name)
         for variety in record.get("varieties", []):
             pokemon = variety["pokemon"]
@@ -348,13 +379,14 @@ def list_forms(region: str, *, workers: int, refresh: bool) -> tuple[dict, list[
             seen.add(pokemon_name)
             forms.append({
                 "dex_number": dex_number,
+                "source_pokedex": pokedex_name,
                 "species": species_name,
                 "species_label": species_label,
                 "name": pokemon_name,
                 "display_name": pokemon_display_name(species_name, pokemon_name, species_label),
                 "is_default": bool(variety.get("is_default")),
             })
-    return pokedex, forms
+    return pokedexes, forms
 
 
 def generate(region: str, template_path: Path, *, workers: int = 8,
@@ -365,11 +397,15 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
     image = Image.open(template_path).convert("RGB")
     background = clean_background(image)
     reveal_background = remove_question_mark(background)
-    pokedex, forms = list_forms(region, workers=workers, refresh=refresh)
+    pokedexes, forms = list_forms(region, workers=workers, refresh=refresh)
+    species_count = len({form["species"] for form in forms})
+    dex_entry_count = sum(len(pokedex["pokemon_entries"]) for pokedex in pokedexes)
     if limit is not None:
         forms = forms[:max(0, limit)]
-    print(f"PokeAPI {pokedex['name']}: {len(pokedex['pokemon_entries'])} Dex entries, "
-          f"{len(forms)} distinct forms to render with {workers} workers.", flush=True)
+    dex_label = " + ".join(pokedex["name"] for pokedex in pokedexes)
+    print(f"[{region}] PokeAPI {dex_label}: {dex_entry_count} source entries, "
+          f"{species_count} unique species, {len(forms)} distinct forms with {workers} workers.",
+          flush=True)
 
     results = []
     completed = 0
@@ -385,31 +421,44 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
             results.append(result)
             completed += 1
             if completed % 25 == 0 or completed == len(forms):
-                print(f"Rendered {completed}/{len(forms)} forms", flush=True)
+                print(f"[{region}] Rendered {completed}/{len(forms)} forms", flush=True)
 
     results.sort(key=lambda row: (row["dex_number"], row["name"]))
+    pokedex_sources = [
+        {
+            "name": pokedex["name"],
+            "url": f"https://pokeapi.co/api/v2/pokedex/{pokedex['name']}/",
+            "entry_count": len(pokedex["pokemon_entries"]),
+        }
+        for pokedex in pokedexes
+    ]
     manifest = {
         "region": region,
-        "pokedex": pokedex["name"],
-        "pokedex_url": f"https://pokeapi.co/api/v2/pokedex/{pokedex['name']}/",
-        "species_count": len(pokedex["pokemon_entries"]),
+        "pokedex": pokedexes[0]["name"],
+        "pokedex_url": pokedex_sources[0]["url"],
+        "pokedexes": pokedex_sources,
+        "pokedex_entry_count": dex_entry_count,
+        "species_count": species_count,
         "form_count": len(forms),
         "generated_count": sum(row["status"] == "generated" for row in results),
         "missing_or_failed_count": sum(row["status"] != "generated" for row in results),
-        "form_policy": "all PokeAPI varieties for every species in the updated regional Pokédex",
+        "form_policy": "all PokeAPI varieties for every unique species across the configured regional Pokédexes",
         "results": results,
     }
     region_dir.mkdir(parents=True, exist_ok=True)
     (region_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    source_summary = ", ".join(
+        f"[`{source['name']}`]({source['url']}) ({source['entry_count']} entries)"
+        for source in pokedex_sources)
     (region_dir / "README.md").write_text(
         f"# {region.title()} Pokémon quiz images\n\n"
-        f"Source Pokédex: [`{pokedex['name']}`]({manifest['pokedex_url']}) "
-        f"({manifest['species_count']} entries).\n\n"
+        f"Source Pokédexes: {source_summary}. There are {species_count} unique species "
+        f"across {dex_entry_count} regional entries.\n\n"
         f"The generator expands every listed species to all PokeAPI varieties. It rendered "
         f"{manifest['generated_count']} forms as paired images in `silhouettes/` and `revealed/`. "
         f"Each revealed image replaces the question mark with the Pokémon/form name. This includes "
-        f"Alolan forms and battle forms such as Ultra Necrozma when PokeAPI provides official "
+        f"regional forms and battle forms such as Ultra Necrozma when PokeAPI provides official "
         f"artwork. See `manifest.json` for each file and source URL.\n\n"
         "Pokémon names and artwork are the property of their respective rights holders; artwork "
         "is fetched from PokeAPI's sprite data.\n",
@@ -417,25 +466,73 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
     return manifest
 
 
+def generate_all(template_path: Path, *, workers: int = 8,
+                 limit: int | None = None, refresh: bool = False) -> dict[str, dict]:
+    """Build every configured region concurrently within a shared worker budget."""
+    if workers < 1:
+        raise ValueError("--workers must be at least 1")
+    parallel_regions = min(len(REGIONS), workers)
+    base_workers, extra_workers = divmod(workers, parallel_regions)
+    allocations = {
+        region: base_workers + (1 if index < extra_workers else 0)
+        for index, region in enumerate(REGIONS)
+    }
+    print(f"Generating {len(REGIONS)} regions with up to {parallel_regions} regions "
+          f"in parallel ({workers} total workers).", flush=True)
+
+    manifests = {}
+    errors = {}
+    with ThreadPoolExecutor(max_workers=parallel_regions) as executor:
+        futures = {
+            executor.submit(generate, region, template_path,
+                            workers=allocations[region], limit=limit, refresh=refresh): region
+            for region in REGIONS
+        }
+        for future in as_completed(futures):
+            region = futures[future]
+            try:
+                manifests[region] = future.result()
+                manifest = manifests[region]
+                print(f"[{region}] complete: {manifest['generated_count']}/"
+                      f"{manifest['form_count']} forms; "
+                      f"{manifest['missing_or_failed_count']} missing/failed.", flush=True)
+            except Exception as exc:
+                errors[region] = f"{type(exc).__name__}: {exc}"
+                print(f"[{region}] region job failed: {errors[region]}", flush=True)
+    if errors:
+        details = "; ".join(f"{region}: {error}" for region, error in errors.items())
+        raise RuntimeError(f"One or more region jobs failed: {details}")
+    return {region: manifests[region] for region in REGIONS}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--region", default="alola", choices=sorted(POKEDEXES),
-                        help="regional Pokédex to process (currently: alola)")
+    parser.add_argument("--region", default="alola", choices=("all", *REGIONS),
+                        help="regional collection to process, or all regions in parallel")
     parser.add_argument("--template", type=Path,
                         default=ROOT / "assets" / "quiz-template.jpg",
                         help="mystery-quiz image to reuse as the background")
     parser.add_argument("--workers", type=int, default=8,
-                        help="parallel API/image workers (default: 8)")
+                        help="worker budget; global across regions for --region all (default: 8)")
     parser.add_argument("--limit", type=int,
-                        help="optional maximum number of forms, useful for a quick test")
+                        help="optional maximum number of forms per region, useful for a quick test")
     parser.add_argument("--refresh", action="store_true",
                         help="ignore HTTP cache and refetch PokeAPI metadata and sprites")
     args = parser.parse_args()
-    manifest = generate(args.region, args.template, workers=args.workers,
-                        limit=args.limit, refresh=args.refresh)
-    print(f"Done: {manifest['generated_count']} generated; "
-          f"{manifest['missing_or_failed_count']} missing/failed. "
-          f"See regions/{args.region}/manifest.json", flush=True)
+    if args.region == "all":
+        manifests = generate_all(args.template, workers=args.workers,
+                                 limit=args.limit, refresh=args.refresh)
+        total_forms = sum(manifest["form_count"] for manifest in manifests.values())
+        generated = sum(manifest["generated_count"] for manifest in manifests.values())
+        failed = sum(manifest["missing_or_failed_count"] for manifest in manifests.values())
+        print(f"All {len(manifests)} regions complete: {generated}/{total_forms} forms generated; "
+              f"{failed} missing/failed. See the regions/ manifests.", flush=True)
+    else:
+        manifest = generate(args.region, args.template, workers=args.workers,
+                            limit=args.limit, refresh=args.refresh)
+        print(f"Done: {manifest['generated_count']} generated; "
+              f"{manifest['missing_or_failed_count']} missing/failed. "
+              f"See regions/{args.region}/manifest.json", flush=True)
 
 
 if __name__ == "__main__":

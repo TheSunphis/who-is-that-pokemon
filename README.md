@@ -1,18 +1,22 @@
 # Who Is That Pokémon?
 
-A region-organized collection of Pokémon quiz cards. Each form gets a pair of images using the same
-background: a black silhouette and the revealed PokeAPI official-artwork sprite. Revealed cards replace
-the question mark with the Pokémon/form name in gold text with a blue outline.
+A region-organized collection of Pokémon quiz cards. Each Pokémon/form gets a pair of cards using the
+same background: a black silhouette and the revealed PokeAPI official-artwork sprite. Silhouette
+cards keep the question mark; revealed cards replace it with the Pokémon/form name in gold with a
+blue outline.
 
-## Current build
+## Regional coverage
 
-- **Alola:** generated from PokeAPI's `updated-alola` Pokédex.
-- **Forms:** every PokeAPI variety for each Alola Pokédex species is included when artwork exists,
-  including Alolan regional forms and forms such as Ultra Necrozma.
-- **Image generation:** parallelized with a configurable worker count; the local HTTP cache prevents
-  repeat downloads. The output manifest records the exact species, form and sprite URL.
+The repository contains generated builds for all ten regions: Kanto, Johto, Hoenn, Sinnoh, Unova,
+Kalos, Alola, Galar, Hisui, and Paldea. The generator uses PokeAPI's current regional Pokédexes,
+combining split/DLC dexes where
+applicable (Kalos, Galar, and Paldea; plus Let's Go Kanto). Every listed species expands to its
+PokeAPI varieties when artwork is available, including regional and battle forms such as Ultra
+Necrozma. Forms without a PokeAPI sprite URL remain in the manifest as `missing_sprite`; the
+renderer does not substitute artwork from a different form. See each `regions/<region>/manifest.json`
+for source dexes, forms, and artwork URLs.
 
-## Generate Alola
+## Generate
 
 Install the Python dependencies:
 
@@ -20,25 +24,26 @@ Install the Python dependencies:
 python3 -m pip install pillow opencv-python numpy
 ```
 
-Place the mystery-quiz template at `assets/quiz-template.jpg`, then run:
+Place the quiz template at `assets/quiz-template.jpg`. Generate one region:
 
 ```bash
 python3 scripts/generate_region.py --region alola --workers 8
 ```
 
-The script fetches the official artwork URL from PokeAPI, caches it and creates:
+Generate all ten regions concurrently (the worker count is a global budget shared across them):
 
-- `regions/alola/silhouettes/<pokemon-form>.jpg`
-- `regions/alola/revealed/<pokemon-form>.jpg`
-- `regions/alola/manifest.json`
+```bash
+python3 scripts/generate_region.py --region all --workers 20
+```
 
-For a small smoke test, add `--limit 10`. To ignore the cache and fetch fresh data, add `--refresh`.
+Each region writes paired files and a manifest under `regions/<region>/`:
 
-## Regions
+- `silhouettes/<pokemon-form>.jpg`
+- `revealed/<pokemon-form>.jpg`
+- `manifest.json`
 
-The repository is laid out for Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Hisui and
-Paldea under `regions/`. Alola is the first generated region; the remaining folders are ready for
-later builds.
+For a smoke test, add `--limit 10` (for `--region all`, this limits each region). The local HTTP
+cache under `.cache/` avoids repeat downloads; add `--refresh` to refetch PokeAPI data and artwork.
 
 ## Data and artwork
 

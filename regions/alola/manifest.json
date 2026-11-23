@@ -2,14 +2,23 @@
   "region": "alola",
   "pokedex": "updated-alola",
   "pokedex_url": "https://pokeapi.co/api/v2/pokedex/updated-alola/",
+  "pokedexes": [
+    {
+      "name": "updated-alola",
+      "url": "https://pokeapi.co/api/v2/pokedex/updated-alola/",
+      "entry_count": 403
+    }
+  ],
+  "pokedex_entry_count": 403,
   "species_count": 403,
   "form_count": 560,
   "generated_count": 560,
   "missing_or_failed_count": 0,
-  "form_policy": "all PokeAPI varieties for every species in the updated regional Pokédex",
+  "form_policy": "all PokeAPI varieties for every unique species across the configured regional Pokédexes",
   "results": [
     {
       "dex_number": 1,
+      "source_pokedex": "updated-alola",
       "species": "rowlet",
       "species_label": "Rowlet",
       "name": "rowlet",
@@ -22,6 +31,7 @@
     },
     {
       "dex_number": 2,
+      "source_pokedex": "updated-alola",
       "species": "dartrix",
       "species_label": "Dartrix",
       "name": "dartrix",
@@ -34,6 +44,7 @@
     },
     {
       "dex_number": 3,
+      "source_pokedex": "updated-alola",
       "species": "decidueye",
       "species_label": "Decidueye",
       "name": "decidueye",
@@ -46,6 +57,7 @@
     },
     {
       "dex_number": 3,
+      "source_pokedex": "updated-alola",
       "species": "decidueye",
       "species_label": "Decidueye",
       "name": "decidueye-hisui",
@@ -58,6 +70,7 @@
     },
     {
       "dex_number": 4,
+      "source_pokedex": "updated-alola",
       "species": "litten",
       "species_label": "Litten",
       "name": "litten",
@@ -70,6 +83,7 @@
     },
     {
       "dex_number": 5,
+      "source_pokedex": "updated-alola",
       "species": "torracat",
       "species_label": "Torracat",
       "name": "torracat",
@@ -82,6 +96,7 @@
     },
     {
       "dex_number": 6,
+      "source_pokedex": "updated-alola",
       "species": "incineroar",
       "species_label": "Incineroar",
       "name": "incineroar",
@@ -94,6 +109,7 @@
     },
     {
       "dex_number": 7,
+      "source_pokedex": "updated-alola",
       "species": "popplio",
       "species_label": "Popplio",
       "name": "popplio",
@@ -106,6 +122,7 @@
     },
     {
       "dex_number": 8,
+      "source_pokedex": "updated-alola",
       "species": "brionne",
       "species_label": "Brionne",
       "name": "brionne",
@@ -118,6 +135,7 @@
     },
     {
       "dex_number": 9,
+      "source_pokedex": "updated-alola",
       "species": "primarina",
       "species_label": "Primarina",
       "name": "primarina",
@@ -130,6 +148,7 @@
     },
     {
       "dex_number": 10,
+      "source_pokedex": "updated-alola",
       "species": "pikipek",
       "species_label": "Pikipek",
       "name": "pikipek",
@@ -142,6 +161,7 @@
     },
     {
       "dex_number": 11,
+      "source_pokedex": "updated-alola",
       "species": "trumbeak",
       "species_label": "Trumbeak",
       "name": "trumbeak",
@@ -154,6 +174,7 @@
     },
     {
       "dex_number": 12,
+      "source_pokedex": "updated-alola",
       "species": "toucannon",
       "species_label": "Toucannon",
       "name": "toucannon",
@@ -166,6 +187,7 @@
     },
     {
       "dex_number": 13,
+      "source_pokedex": "updated-alola",
       "species": "yungoos",
       "species_label": "Yungoos",
       "name": "yungoos",
@@ -178,6 +200,7 @@
     },
     {
       "dex_number": 14,
+      "source_pokedex": "updated-alola",
       "species": "gumshoos",
       "species_label": "Gumshoos",
       "name": "gumshoos",
@@ -190,6 +213,7 @@
     },
     {
       "dex_number": 14,
+      "source_pokedex": "updated-alola",
       "species": "gumshoos",
       "species_label": "Gumshoos",
       "name": "gumshoos-totem",
@@ -202,6 +226,7 @@
     },
     {
       "dex_number": 15,
+      "source_pokedex": "updated-alola",
       "species": "rattata",
       "species_label": "Rattata",
       "name": "rattata",
@@ -214,6 +239,7 @@
     },
     {
       "dex_number": 15,
+      "source_pokedex": "updated-alola",
       "species": "rattata",
       "species_label": "Rattata",
       "name": "rattata-alola",
@@ -226,6 +252,7 @@
     },
     {
       "dex_number": 16,
+      "source_pokedex": "updated-alola",
       "species": "raticate",
       "species_label": "Raticate",
       "name": "raticate",
@@ -238,6 +265,7 @@
     },
     {
       "dex_number": 16,
+      "source_pokedex": "updated-alola",
       "species": "raticate",
       "species_label": "Raticate",
       "name": "raticate-alola",
@@ -250,6 +278,7 @@
     },
     {
       "dex_number": 16,
+      "source_pokedex": "updated-alola",
       "species": "raticate",
       "species_label": "Raticate",
       "name": "raticate-totem-alola",
@@ -262,6 +291,7 @@
     },
     {
       "dex_number": 17,
+      "source_pokedex": "updated-alola",
       "species": "caterpie",
       "species_label": "Caterpie",
       "name": "caterpie",
@@ -274,6 +304,7 @@
     },
     {
       "dex_number": 18,
+      "source_pokedex": "updated-alola",
       "species": "metapod",
       "species_label": "Metapod",
       "name": "metapod",
@@ -286,6 +317,7 @@
     },
     {
       "dex_number": 19,
+      "source_pokedex": "updated-alola",
       "species": "butterfree",
       "species_label": "Butterfree",
       "name": "butterfree",
@@ -298,6 +330,7 @@
     },
     {
       "dex_number": 19,
+      "source_pokedex": "updated-alola",
       "species": "butterfree",
       "species_label": "Butterfree",
       "name": "butterfree-gmax",
@@ -310,6 +343,7 @@
     },
     {
       "dex_number": 20,
+      "source_pokedex": "updated-alola",
       "species": "ledyba",
       "species_label": "Ledyba",
       "name": "ledyba",
@@ -322,6 +356,7 @@
     },
     {
       "dex_number": 21,
+      "source_pokedex": "updated-alola",
       "species": "ledian",
       "species_label": "Ledian",
       "name": "ledian",
@@ -334,6 +369,7 @@
     },
     {
       "dex_number": 22,
+      "source_pokedex": "updated-alola",
       "species": "spinarak",
       "species_label": "Spinarak",
       "name": "spinarak",
@@ -346,6 +382,7 @@
     },
     {
       "dex_number": 23,
+      "source_pokedex": "updated-alola",
       "species": "ariados",
       "species_label": "Ariados",
       "name": "ariados",
@@ -358,6 +395,7 @@
     },
     {
       "dex_number": 24,
+      "source_pokedex": "updated-alola",
       "species": "buneary",
       "species_label": "Buneary",
       "name": "buneary",
@@ -370,6 +408,7 @@
     },
     {
       "dex_number": 25,
+      "source_pokedex": "updated-alola",
       "species": "lopunny",
       "species_label": "Lopunny",
       "name": "lopunny",
@@ -382,6 +421,7 @@
     },
     {
       "dex_number": 25,
+      "source_pokedex": "updated-alola",
       "species": "lopunny",
       "species_label": "Lopunny",
       "name": "lopunny-mega",
@@ -394,6 +434,7 @@
     },
     {
       "dex_number": 26,
+      "source_pokedex": "updated-alola",
       "species": "inkay",
       "species_label": "Inkay",
       "name": "inkay",
@@ -406,6 +447,7 @@
     },
     {
       "dex_number": 27,
+      "source_pokedex": "updated-alola",
       "species": "malamar",
       "species_label": "Malamar",
       "name": "malamar",
@@ -418,6 +460,7 @@
     },
     {
       "dex_number": 27,
+      "source_pokedex": "updated-alola",
       "species": "malamar",
       "species_label": "Malamar",
       "name": "malamar-mega",
@@ -430,6 +473,7 @@
     },
     {
       "dex_number": 28,
+      "source_pokedex": "updated-alola",
       "species": "zorua",
       "species_label": "Zorua",
       "name": "zorua",
@@ -442,6 +486,7 @@
     },
     {
       "dex_number": 28,
+      "source_pokedex": "updated-alola",
       "species": "zorua",
       "species_label": "Zorua",
       "name": "zorua-hisui",
@@ -454,6 +499,7 @@
     },
     {
       "dex_number": 29,
+      "source_pokedex": "updated-alola",
       "species": "zoroark",
       "species_label": "Zoroark",
       "name": "zoroark",
@@ -466,6 +512,7 @@
     },
     {
       "dex_number": 29,
+      "source_pokedex": "updated-alola",
       "species": "zoroark",
       "species_label": "Zoroark",
       "name": "zoroark-hisui",
@@ -478,6 +525,7 @@
     },
     {
       "dex_number": 30,
+      "source_pokedex": "updated-alola",
       "species": "furfrou",
       "species_label": "Furfrou",
       "name": "furfrou",
@@ -490,6 +538,7 @@
     },
     {
       "dex_number": 31,
+      "source_pokedex": "updated-alola",
       "species": "pichu",
       "species_label": "Pichu",
       "name": "pichu",
@@ -502,6 +551,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu",
@@ -514,6 +564,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-alola-cap",
@@ -526,6 +577,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-belle",
@@ -538,6 +590,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-cosplay",
@@ -550,6 +603,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-gmax",
@@ -562,6 +616,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-hoenn-cap",
@@ -574,6 +629,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-kalos-cap",
@@ -586,6 +642,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-libre",
@@ -598,6 +655,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-original-cap",
@@ -610,6 +668,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-partner-cap",
@@ -622,6 +681,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-phd",
@@ -634,6 +694,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-pop-star",
@@ -646,6 +707,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-rock-star",
@@ -658,6 +720,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-sinnoh-cap",
@@ -670,6 +733,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-starter",
@@ -682,6 +746,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-unova-cap",
@@ -694,6 +759,7 @@
     },
     {
       "dex_number": 32,
+      "source_pokedex": "updated-alola",
       "species": "pikachu",
       "species_label": "Pikachu",
       "name": "pikachu-world-cap",
@@ -706,6 +772,7 @@
     },
     {
       "dex_number": 33,
+      "source_pokedex": "updated-alola",
       "species": "raichu",
       "species_label": "Raichu",
       "name": "raichu",
@@ -718,6 +785,7 @@
     },
     {
       "dex_number": 33,
+      "source_pokedex": "updated-alola",
       "species": "raichu",
       "species_label": "Raichu",
       "name": "raichu-alola",
@@ -730,6 +798,7 @@
     },
     {
       "dex_number": 33,
+      "source_pokedex": "updated-alola",
       "species": "raichu",
       "species_label": "Raichu",
       "name": "raichu-mega-x",
@@ -742,6 +811,7 @@
     },
     {
       "dex_number": 33,
+      "source_pokedex": "updated-alola",
       "species": "raichu",
       "species_label": "Raichu",
       "name": "raichu-mega-y",
@@ -754,6 +824,7 @@
     },
     {
       "dex_number": 34,
+      "source_pokedex": "updated-alola",
       "species": "grubbin",
       "species_label": "Grubbin",
       "name": "grubbin",
@@ -766,6 +837,7 @@
     },
     {
       "dex_number": 35,
+      "source_pokedex": "updated-alola",
       "species": "charjabug",
       "species_label": "Charjabug",
       "name": "charjabug",
@@ -778,6 +850,7 @@
     },
     {
       "dex_number": 36,
+      "source_pokedex": "updated-alola",
       "species": "vikavolt",
       "species_label": "Vikavolt",
       "name": "vikavolt",
@@ -790,6 +863,7 @@
     },
     {
       "dex_number": 36,
+      "source_pokedex": "updated-alola",
       "species": "vikavolt",
       "species_label": "Vikavolt",
       "name": "vikavolt-totem",
@@ -802,6 +876,7 @@
     },
     {
       "dex_number": 37,
+      "source_pokedex": "updated-alola",
       "species": "bonsly",
       "species_label": "Bonsly",
       "name": "bonsly",
@@ -814,6 +889,7 @@
     },
     {
       "dex_number": 38,
+      "source_pokedex": "updated-alola",
       "species": "sudowoodo",
       "species_label": "Sudowoodo",
       "name": "sudowoodo",
@@ -826,6 +902,7 @@
     },
     {
       "dex_number": 39,
+      "source_pokedex": "updated-alola",
       "species": "happiny",
       "species_label": "Happiny",
       "name": "happiny",
@@ -838,6 +915,7 @@
     },
     {
       "dex_number": 40,
+      "source_pokedex": "updated-alola",
       "species": "chansey",
       "species_label": "Chansey",
       "name": "chansey",
@@ -850,6 +928,7 @@
     },
     {
       "dex_number": 41,
+      "source_pokedex": "updated-alola",
       "species": "blissey",
       "species_label": "Blissey",
       "name": "blissey",
@@ -862,6 +941,7 @@
     },
     {
       "dex_number": 42,
+      "source_pokedex": "updated-alola",
       "species": "munchlax",
       "species_label": "Munchlax",
       "name": "munchlax",
@@ -874,6 +954,7 @@
     },
     {
       "dex_number": 43,
+      "source_pokedex": "updated-alola",
       "species": "snorlax",
       "species_label": "Snorlax",
       "name": "snorlax",
@@ -886,6 +967,7 @@
     },
     {
       "dex_number": 43,
+      "source_pokedex": "updated-alola",
       "species": "snorlax",
       "species_label": "Snorlax",
       "name": "snorlax-gmax",
@@ -898,6 +980,7 @@
     },
     {
       "dex_number": 44,
+      "source_pokedex": "updated-alola",
       "species": "slowpoke",
       "species_label": "Slowpoke",
       "name": "slowpoke",
@@ -910,6 +993,7 @@
     },
     {
       "dex_number": 44,
+      "source_pokedex": "updated-alola",
       "species": "slowpoke",
       "species_label": "Slowpoke",
       "name": "slowpoke-galar",
@@ -922,6 +1006,7 @@
     },
     {
       "dex_number": 45,
+      "source_pokedex": "updated-alola",
       "species": "slowbro",
       "species_label": "Slowbro",
       "name": "slowbro",
@@ -934,6 +1019,7 @@
     },
     {
       "dex_number": 45,
+      "source_pokedex": "updated-alola",
       "species": "slowbro",
       "species_label": "Slowbro",
       "name": "slowbro-galar",
@@ -946,6 +1032,7 @@
     },
     {
       "dex_number": 45,
+      "source_pokedex": "updated-alola",
       "species": "slowbro",
       "species_label": "Slowbro",
       "name": "slowbro-mega",
@@ -958,6 +1045,7 @@
     },
     {
       "dex_number": 46,
+      "source_pokedex": "updated-alola",
       "species": "slowking",
       "species_label": "Slowking",
       "name": "slowking",
@@ -970,6 +1058,7 @@
     },
     {
       "dex_number": 46,
+      "source_pokedex": "updated-alola",
       "species": "slowking",
       "species_label": "Slowking",
       "name": "slowking-galar",
@@ -982,6 +1071,7 @@
     },
     {
       "dex_number": 47,
+      "source_pokedex": "updated-alola",
       "species": "wingull",
       "species_label": "Wingull",
       "name": "wingull",
@@ -994,6 +1084,7 @@
     },
     {
       "dex_number": 48,
+      "source_pokedex": "updated-alola",
       "species": "pelipper",
       "species_label": "Pelipper",
       "name": "pelipper",
@@ -1006,6 +1097,7 @@
     },
     {
       "dex_number": 49,
+      "source_pokedex": "updated-alola",
       "species": "abra",
       "species_label": "Abra",
       "name": "abra",
@@ -1018,6 +1110,7 @@
     },
     {
       "dex_number": 50,
+      "source_pokedex": "updated-alola",
       "species": "kadabra",
       "species_label": "Kadabra",
       "name": "kadabra",
@@ -1030,6 +1123,7 @@
     },
     {
       "dex_number": 51,
+      "source_pokedex": "updated-alola",
       "species": "alakazam",
       "species_label": "Alakazam",
       "name": "alakazam",
@@ -1042,6 +1136,7 @@
     },
     {
       "dex_number": 51,
+      "source_pokedex": "updated-alola",
       "species": "alakazam",
       "species_label": "Alakazam",
       "name": "alakazam-mega",
@@ -1054,6 +1149,7 @@
     },
     {
       "dex_number": 52,
+      "source_pokedex": "updated-alola",
       "species": "meowth",
       "species_label": "Meowth",
       "name": "meowth",
@@ -1066,6 +1162,7 @@
     },
     {
       "dex_number": 52,
+      "source_pokedex": "updated-alola",
       "species": "meowth",
       "species_label": "Meowth",
       "name": "meowth-alola",
@@ -1078,6 +1175,7 @@
     },
     {
       "dex_number": 52,
+      "source_pokedex": "updated-alola",
       "species": "meowth",
       "species_label": "Meowth",
       "name": "meowth-galar",
@@ -1090,6 +1188,7 @@
     },
     {
       "dex_number": 52,
+      "source_pokedex": "updated-alola",
       "species": "meowth",
       "species_label": "Meowth",
       "name": "meowth-gmax",
@@ -1102,6 +1201,7 @@
     },
     {
       "dex_number": 53,
+      "source_pokedex": "updated-alola",
       "species": "persian",
       "species_label": "Persian",
       "name": "persian",
@@ -1114,6 +1214,7 @@
     },
     {
       "dex_number": 53,
+      "source_pokedex": "updated-alola",
       "species": "persian",
       "species_label": "Persian",
       "name": "persian-alola",
@@ -1126,6 +1227,7 @@
     },
     {
       "dex_number": 54,
+      "source_pokedex": "updated-alola",
       "species": "magnemite",
       "species_label": "Magnemite",
       "name": "magnemite",
@@ -1138,6 +1240,7 @@
     },
     {
       "dex_number": 55,
+      "source_pokedex": "updated-alola",
       "species": "magneton",
       "species_label": "Magneton",
       "name": "magneton",
@@ -1150,6 +1253,7 @@
     },
     {
       "dex_number": 56,
+      "source_pokedex": "updated-alola",
       "species": "magnezone",
       "species_label": "Magnezone",
       "name": "magnezone",
@@ -1162,6 +1266,7 @@
     },
     {
       "dex_number": 57,
+      "source_pokedex": "updated-alola",
       "species": "grimer",
       "species_label": "Grimer",
       "name": "grimer",
@@ -1174,6 +1279,7 @@
     },
     {
       "dex_number": 57,
+      "source_pokedex": "updated-alola",
       "species": "grimer",
       "species_label": "Grimer",
       "name": "grimer-alola",
@@ -1186,6 +1292,7 @@
     },
     {
       "dex_number": 58,
+      "source_pokedex": "updated-alola",
       "species": "muk",
       "species_label": "Muk",
       "name": "muk",
@@ -1198,6 +1305,7 @@
     },
     {
       "dex_number": 58,
+      "source_pokedex": "updated-alola",
       "species": "muk",
       "species_label": "Muk",
       "name": "muk-alola",
@@ -1210,6 +1318,7 @@
     },
     {
       "dex_number": 59,
+      "source_pokedex": "updated-alola",
       "species": "mime-jr",
       "species_label": "Mime Jr.",
       "name": "mime-jr",
@@ -1222,6 +1331,7 @@
     },
     {
       "dex_number": 60,
+      "source_pokedex": "updated-alola",
       "species": "mr-mime",
       "species_label": "Mr. Mime",
       "name": "mr-mime",
@@ -1234,6 +1344,7 @@
     },
     {
       "dex_number": 60,
+      "source_pokedex": "updated-alola",
       "species": "mr-mime",
       "species_label": "Mr. Mime",
       "name": "mr-mime-galar",
@@ -1246,6 +1357,7 @@
     },
     {
       "dex_number": 61,
+      "source_pokedex": "updated-alola",
       "species": "ekans",
       "species_label": "Ekans",
       "name": "ekans",
@@ -1258,6 +1370,7 @@
     },
     {
       "dex_number": 62,
+      "source_pokedex": "updated-alola",
       "species": "arbok",
       "species_label": "Arbok",
       "name": "arbok",
@@ -1270,6 +1383,7 @@
     },
     {
       "dex_number": 63,
+      "source_pokedex": "updated-alola",
       "species": "dunsparce",
       "species_label": "Dunsparce",
       "name": "dunsparce",
@@ -1282,6 +1396,7 @@
     },
     {
       "dex_number": 64,
+      "source_pokedex": "updated-alola",
       "species": "growlithe",
       "species_label": "Growlithe",
       "name": "growlithe",
@@ -1294,6 +1409,7 @@
     },
     {
       "dex_number": 64,
+      "source_pokedex": "updated-alola",
       "species": "growlithe",
       "species_label": "Growlithe",
       "name": "growlithe-hisui",
@@ -1306,6 +1422,7 @@
     },
     {
       "dex_number": 65,
+      "source_pokedex": "updated-alola",
       "species": "arcanine",
       "species_label": "Arcanine",
       "name": "arcanine",
@@ -1318,6 +1435,7 @@
     },
     {
       "dex_number": 65,
+      "source_pokedex": "updated-alola",
       "species": "arcanine",
       "species_label": "Arcanine",
       "name": "arcanine-hisui",
@@ -1330,6 +1448,7 @@
     },
     {
       "dex_number": 66,
+      "source_pokedex": "updated-alola",
       "species": "drowzee",
       "species_label": "Drowzee",
       "name": "drowzee",
@@ -1342,6 +1461,7 @@
     },
     {
       "dex_number": 67,
+      "source_pokedex": "updated-alola",
       "species": "hypno",
       "species_label": "Hypno",
       "name": "hypno",
@@ -1354,6 +1474,7 @@
     },
     {
       "dex_number": 68,
+      "source_pokedex": "updated-alola",
       "species": "makuhita",
       "species_label": "Makuhita",
       "name": "makuhita",
@@ -1366,6 +1487,7 @@
     },
     {
       "dex_number": 69,
+      "source_pokedex": "updated-alola",
       "species": "hariyama",
       "species_label": "Hariyama",
       "name": "hariyama",
@@ -1378,6 +1500,7 @@
     },
     {
       "dex_number": 70,
+      "source_pokedex": "updated-alola",
       "species": "smeargle",
       "species_label": "Smeargle",
       "name": "smeargle",
@@ -1390,6 +1513,7 @@
     },
     {
       "dex_number": 71,
+      "source_pokedex": "updated-alola",
       "species": "crabrawler",
       "species_label": "Crabrawler",
       "name": "crabrawler",
@@ -1402,6 +1526,7 @@
     },
     {
       "dex_number": 72,
+      "source_pokedex": "updated-alola",
       "species": "crabominable",
       "species_label": "Crabominable",
       "name": "crabominable",
@@ -1414,6 +1539,7 @@
     },
     {
       "dex_number": 72,
+      "source_pokedex": "updated-alola",
       "species": "crabominable",
       "species_label": "Crabominable",
       "name": "crabominable-mega",
@@ -1426,6 +1552,7 @@
     },
     {
       "dex_number": 73,
+      "source_pokedex": "updated-alola",
       "species": "gastly",
       "species_label": "Gastly",
       "name": "gastly",
@@ -1438,6 +1565,7 @@
     },
     {
       "dex_number": 74,
+      "source_pokedex": "updated-alola",
       "species": "haunter",
       "species_label": "Haunter",
       "name": "haunter",
@@ -1450,6 +1578,7 @@
     },
     {
       "dex_number": 75,
+      "source_pokedex": "updated-alola",
       "species": "gengar",
       "species_label": "Gengar",
       "name": "gengar",
@@ -1462,6 +1591,7 @@
     },
     {
       "dex_number": 75,
+      "source_pokedex": "updated-alola",
       "species": "gengar",
       "species_label": "Gengar",
       "name": "gengar-gmax",
@@ -1474,6 +1604,7 @@
     },
     {
       "dex_number": 75,
+      "source_pokedex": "updated-alola",
       "species": "gengar",
       "species_label": "Gengar",
       "name": "gengar-mega",
@@ -1486,6 +1617,7 @@
     },
     {
       "dex_number": 76,
+      "source_pokedex": "updated-alola",
       "species": "drifloon",
       "species_label": "Drifloon",
       "name": "drifloon",
@@ -1498,6 +1630,7 @@
     },
     {
       "dex_number": 77,
+      "source_pokedex": "updated-alola",
       "species": "drifblim",
       "species_label": "Drifblim",
       "name": "drifblim",
@@ -1510,6 +1643,7 @@
     },
     {
       "dex_number": 78,
+      "source_pokedex": "updated-alola",
       "species": "murkrow",
       "species_label": "Murkrow",
       "name": "murkrow",
@@ -1522,6 +1656,7 @@
     },
     {
       "dex_number": 79,
+      "source_pokedex": "updated-alola",
       "species": "honchkrow",
       "species_label": "Honchkrow",
       "name": "honchkrow",
@@ -1534,6 +1669,7 @@
     },
     {
       "dex_number": 80,
+      "source_pokedex": "updated-alola",
       "species": "zubat",
       "species_label": "Zubat",
       "name": "zubat",
@@ -1546,6 +1682,7 @@
     },
     {
       "dex_number": 81,
+      "source_pokedex": "updated-alola",
       "species": "golbat",
       "species_label": "Golbat",
       "name": "golbat",
@@ -1558,6 +1695,7 @@
     },
     {
       "dex_number": 82,
+      "source_pokedex": "updated-alola",
       "species": "crobat",
       "species_label": "Crobat",
       "name": "crobat",
@@ -1570,6 +1708,7 @@
     },
     {
       "dex_number": 83,
+      "source_pokedex": "updated-alola",
       "species": "noibat",
       "species_label": "Noibat",
       "name": "noibat",
@@ -1582,6 +1721,7 @@
     },
     {
       "dex_number": 84,
+      "source_pokedex": "updated-alola",
       "species": "noivern",
       "species_label": "Noivern",
       "name": "noivern",
@@ -1594,6 +1734,7 @@
     },
     {
       "dex_number": 85,
+      "source_pokedex": "updated-alola",
       "species": "diglett",
       "species_label": "Diglett",
       "name": "diglett",
@@ -1606,6 +1747,7 @@
     },
     {
       "dex_number": 85,
+      "source_pokedex": "updated-alola",
       "species": "diglett",
       "species_label": "Diglett",
       "name": "diglett-alola",
@@ -1618,6 +1760,7 @@
     },
     {
       "dex_number": 86,
+      "source_pokedex": "updated-alola",
       "species": "dugtrio",
       "species_label": "Dugtrio",
       "name": "dugtrio",
@@ -1630,6 +1773,7 @@
     },
     {
       "dex_number": 86,
+      "source_pokedex": "updated-alola",
       "species": "dugtrio",
       "species_label": "Dugtrio",
       "name": "dugtrio-alola",
@@ -1642,6 +1786,7 @@
     },
     {
       "dex_number": 87,
+      "source_pokedex": "updated-alola",
       "species": "spearow",
       "species_label": "Spearow",
       "name": "spearow",
@@ -1654,6 +1799,7 @@
     },
     {
       "dex_number": 88,
+      "source_pokedex": "updated-alola",
       "species": "fearow",
       "species_label": "Fearow",
       "name": "fearow",
@@ -1666,6 +1812,7 @@
     },
     {
       "dex_number": 89,
+      "source_pokedex": "updated-alola",
       "species": "rufflet",
       "species_label": "Rufflet",
       "name": "rufflet",
@@ -1678,6 +1825,7 @@
     },
     {
       "dex_number": 90,
+      "source_pokedex": "updated-alola",
       "species": "braviary",
       "species_label": "Braviary",
       "name": "braviary",
@@ -1690,6 +1838,7 @@
     },
     {
       "dex_number": 90,
+      "source_pokedex": "updated-alola",
       "species": "braviary",
       "species_label": "Braviary",
       "name": "braviary-hisui",
@@ -1702,6 +1851,7 @@
     },
     {
       "dex_number": 91,
+      "source_pokedex": "updated-alola",
       "species": "vullaby",
       "species_label": "Vullaby",
       "name": "vullaby",
@@ -1714,6 +1864,7 @@
     },
     {
       "dex_number": 92,
+      "source_pokedex": "updated-alola",
       "species": "mandibuzz",
       "species_label": "Mandibuzz",
       "name": "mandibuzz",
@@ -1726,6 +1877,7 @@
     },
     {
       "dex_number": 93,
+      "source_pokedex": "updated-alola",
       "species": "mankey",
       "species_label": "Mankey",
       "name": "mankey",
@@ -1738,6 +1890,7 @@
     },
     {
       "dex_number": 94,
+      "source_pokedex": "updated-alola",
       "species": "primeape",
       "species_label": "Primeape",
       "name": "primeape",
@@ -1750,6 +1903,7 @@
     },
     {
       "dex_number": 95,
+      "source_pokedex": "updated-alola",
       "species": "delibird",
       "species_label": "Delibird",
       "name": "delibird",
@@ -1762,6 +1916,7 @@
     },
     {
       "dex_number": 96,
+      "source_pokedex": "updated-alola",
       "species": "hawlucha",
       "species_label": "Hawlucha",
       "name": "hawlucha",
@@ -1774,6 +1929,7 @@
     },
     {
       "dex_number": 96,
+      "source_pokedex": "updated-alola",
       "species": "hawlucha",
       "species_label": "Hawlucha",
       "name": "hawlucha-mega",
@@ -1786,6 +1942,7 @@
     },
     {
       "dex_number": 97,
+      "source_pokedex": "updated-alola",
       "species": "oricorio",
       "species_label": "Oricorio",
       "name": "oricorio-baile",
@@ -1798,6 +1955,7 @@
     },
     {
       "dex_number": 97,
+      "source_pokedex": "updated-alola",
       "species": "oricorio",
       "species_label": "Oricorio",
       "name": "oricorio-pau",
@@ -1810,6 +1968,7 @@
     },
     {
       "dex_number": 97,
+      "source_pokedex": "updated-alola",
       "species": "oricorio",
       "species_label": "Oricorio",
       "name": "oricorio-pom-pom",
@@ -1822,6 +1981,7 @@
     },
     {
       "dex_number": 97,
+      "source_pokedex": "updated-alola",
       "species": "oricorio",
       "species_label": "Oricorio",
       "name": "oricorio-sensu",
@@ -1834,6 +1994,7 @@
     },
     {
       "dex_number": 98,
+      "source_pokedex": "updated-alola",
       "species": "cutiefly",
       "species_label": "Cutiefly",
       "name": "cutiefly",
@@ -1846,6 +2007,7 @@
     },
     {
       "dex_number": 99,
+      "source_pokedex": "updated-alola",
       "species": "ribombee",
       "species_label": "Ribombee",
       "name": "ribombee",
@@ -1858,6 +2020,7 @@
     },
     {
       "dex_number": 99,
+      "source_pokedex": "updated-alola",
       "species": "ribombee",
       "species_label": "Ribombee",
       "name": "ribombee-totem",
@@ -1870,6 +2033,7 @@
     },
     {
       "dex_number": 100,
+      "source_pokedex": "updated-alola",
       "species": "flabebe",
       "species_label": "Flabébé",
       "name": "flabebe",
@@ -1882,6 +2046,7 @@
     },
     {
       "dex_number": 101,
+      "source_pokedex": "updated-alola",
       "species": "floette",
       "species_label": "Floette",
       "name": "floette",
@@ -1894,6 +2059,7 @@
     },
     {
       "dex_number": 101,
+      "source_pokedex": "updated-alola",
       "species": "floette",
       "species_label": "Floette",
       "name": "floette-eternal",
@@ -1906,6 +2072,7 @@
     },
     {
       "dex_number": 101,
+      "source_pokedex": "updated-alola",
       "species": "floette",
       "species_label": "Floette",
       "name": "floette-mega",
@@ -1918,6 +2085,7 @@
     },
     {
       "dex_number": 102,
+      "source_pokedex": "updated-alola",
       "species": "florges",
       "species_label": "Florges",
       "name": "florges",
@@ -1930,6 +2098,7 @@
     },
     {
       "dex_number": 103,
+      "source_pokedex": "updated-alola",
       "species": "petilil",
       "species_label": "Petilil",
       "name": "petilil",
@@ -1942,6 +2111,7 @@
     },
     {
       "dex_number": 104,
+      "source_pokedex": "updated-alola",
       "species": "lilligant",
       "species_label": "Lilligant",
       "name": "lilligant",
@@ -1954,6 +2124,7 @@
     },
     {
       "dex_number": 104,
+      "source_pokedex": "updated-alola",
       "species": "lilligant",
       "species_label": "Lilligant",
       "name": "lilligant-hisui",
@@ -1966,6 +2137,7 @@
     },
     {
       "dex_number": 105,
+      "source_pokedex": "updated-alola",
       "species": "cottonee",
       "species_label": "Cottonee",
       "name": "cottonee",
@@ -1978,6 +2150,7 @@
     },
     {
       "dex_number": 106,
+      "source_pokedex": "updated-alola",
       "species": "whimsicott",
       "species_label": "Whimsicott",
       "name": "whimsicott",
@@ -1990,6 +2163,7 @@
     },
     {
       "dex_number": 107,
+      "source_pokedex": "updated-alola",
       "species": "psyduck",
       "species_label": "Psyduck",
       "name": "psyduck",
@@ -2002,6 +2176,7 @@
     },
     {
       "dex_number": 108,
+      "source_pokedex": "updated-alola",
       "species": "golduck",
       "species_label": "Golduck",
       "name": "golduck",
@@ -2014,6 +2189,7 @@
     },
     {
       "dex_number": 109,
+      "source_pokedex": "updated-alola",
       "species": "smoochum",
       "species_label": "Smoochum",
       "name": "smoochum",
@@ -2026,6 +2202,7 @@
     },
     {
       "dex_number": 110,
+      "source_pokedex": "updated-alola",
       "species": "jynx",
       "species_label": "Jynx",
       "name": "jynx",
@@ -2038,6 +2215,7 @@
     },
     {
       "dex_number": 111,
+      "source_pokedex": "updated-alola",
       "species": "magikarp",
       "species_label": "Magikarp",
       "name": "magikarp",
@@ -2050,6 +2228,7 @@
     },
     {
       "dex_number": 112,
+      "source_pokedex": "updated-alola",
       "species": "gyarados",
       "species_label": "Gyarados",
       "name": "gyarados",
@@ -2062,6 +2241,7 @@
     },
     {
       "dex_number": 112,
+      "source_pokedex": "updated-alola",
       "species": "gyarados",
       "species_label": "Gyarados",
       "name": "gyarados-mega",
@@ -2074,6 +2254,7 @@
     },
     {
       "dex_number": 113,
+      "source_pokedex": "updated-alola",
       "species": "barboach",
       "species_label": "Barboach",
       "name": "barboach",
@@ -2086,6 +2267,7 @@
     },
     {
       "dex_number": 114,
+      "source_pokedex": "updated-alola",
       "species": "whiscash",
       "species_label": "Whiscash",
       "name": "whiscash",
@@ -2098,6 +2280,7 @@
     },
     {
       "dex_number": 115,
+      "source_pokedex": "updated-alola",
       "species": "seel",
       "species_label": "Seel",
       "name": "seel",
@@ -2110,6 +2293,7 @@
     },
     {
       "dex_number": 116,
+      "source_pokedex": "updated-alola",
       "species": "dewgong",
       "species_label": "Dewgong",
       "name": "dewgong",
@@ -2122,6 +2306,7 @@
     },
     {
       "dex_number": 117,
+      "source_pokedex": "updated-alola",
       "species": "machop",
       "species_label": "Machop",
       "name": "machop",
@@ -2134,6 +2319,7 @@
     },
     {
       "dex_number": 118,
+      "source_pokedex": "updated-alola",
       "species": "machoke",
       "species_label": "Machoke",
       "name": "machoke",
@@ -2146,6 +2332,7 @@
     },
     {
       "dex_number": 119,
+      "source_pokedex": "updated-alola",
       "species": "machamp",
       "species_label": "Machamp",
       "name": "machamp",
@@ -2158,6 +2345,7 @@
     },
     {
       "dex_number": 119,
+      "source_pokedex": "updated-alola",
       "species": "machamp",
       "species_label": "Machamp",
       "name": "machamp-gmax",
@@ -2170,6 +2358,7 @@
     },
     {
       "dex_number": 120,
+      "source_pokedex": "updated-alola",
       "species": "roggenrola",
       "species_label": "Roggenrola",
       "name": "roggenrola",
@@ -2182,6 +2371,7 @@
     },
     {
       "dex_number": 121,
+      "source_pokedex": "updated-alola",
       "species": "boldore",
       "species_label": "Boldore",
       "name": "boldore",
@@ -2194,6 +2384,7 @@
     },
     {
       "dex_number": 122,
+      "source_pokedex": "updated-alola",
       "species": "gigalith",
       "species_label": "Gigalith",
       "name": "gigalith",
@@ -2206,6 +2397,7 @@
     },
     {
       "dex_number": 123,
+      "source_pokedex": "updated-alola",
       "species": "carbink",
       "species_label": "Carbink",
       "name": "carbink",
@@ -2218,6 +2410,7 @@
     },
     {
       "dex_number": 124,
+      "source_pokedex": "updated-alola",
       "species": "sableye",
       "species_label": "Sableye",
       "name": "sableye",
@@ -2230,6 +2423,7 @@
     },
     {
       "dex_number": 124,
+      "source_pokedex": "updated-alola",
       "species": "sableye",
       "species_label": "Sableye",
       "name": "sableye-mega",
@@ -2242,6 +2436,7 @@
     },
     {
       "dex_number": 125,
+      "source_pokedex": "updated-alola",
       "species": "mawile",
       "species_label": "Mawile",
       "name": "mawile",
@@ -2254,6 +2449,7 @@
     },
     {
       "dex_number": 125,
+      "source_pokedex": "updated-alola",
       "species": "mawile",
       "species_label": "Mawile",
       "name": "mawile-mega",
@@ -2266,6 +2462,7 @@
     },
     {
       "dex_number": 126,
+      "source_pokedex": "updated-alola",
       "species": "rockruff",
       "species_label": "Rockruff",
       "name": "rockruff",
@@ -2278,6 +2475,7 @@
     },
     {
       "dex_number": 126,
+      "source_pokedex": "updated-alola",
       "species": "rockruff",
       "species_label": "Rockruff",
       "name": "rockruff-own-tempo",
@@ -2290,6 +2488,7 @@
     },
     {
       "dex_number": 127,
+      "source_pokedex": "updated-alola",
       "species": "lycanroc",
       "species_label": "Lycanroc",
       "name": "lycanroc-dusk",
@@ -2302,6 +2501,7 @@
     },
     {
       "dex_number": 127,
+      "source_pokedex": "updated-alola",
       "species": "lycanroc",
       "species_label": "Lycanroc",
       "name": "lycanroc-midday",
@@ -2314,6 +2514,7 @@
     },
     {
       "dex_number": 127,
+      "source_pokedex": "updated-alola",
       "species": "lycanroc",
       "species_label": "Lycanroc",
       "name": "lycanroc-midnight",
@@ -2326,6 +2527,7 @@
     },
     {
       "dex_number": 128,
+      "source_pokedex": "updated-alola",
       "species": "spinda",
       "species_label": "Spinda",
       "name": "spinda",
@@ -2338,6 +2540,7 @@
     },
     {
       "dex_number": 129,
+      "source_pokedex": "updated-alola",
       "species": "tentacool",
       "species_label": "Tentacool",
       "name": "tentacool",
@@ -2350,6 +2553,7 @@
     },
     {
       "dex_number": 130,
+      "source_pokedex": "updated-alola",
       "species": "tentacruel",
       "species_label": "Tentacruel",
       "name": "tentacruel",
@@ -2362,6 +2566,7 @@
     },
     {
       "dex_number": 131,
+      "source_pokedex": "updated-alola",
       "species": "finneon",
       "species_label": "Finneon",
       "name": "finneon",
@@ -2374,6 +2579,7 @@
     },
     {
       "dex_number": 132,
+      "source_pokedex": "updated-alola",
       "species": "lumineon",
       "species_label": "Lumineon",
       "name": "lumineon",
@@ -2386,6 +2592,7 @@
     },
     {
       "dex_number": 133,
+      "source_pokedex": "updated-alola",
       "species": "wishiwashi",
       "species_label": "Wishiwashi",
       "name": "wishiwashi-school",
@@ -2398,6 +2605,7 @@
     },
     {
       "dex_number": 133,
+      "source_pokedex": "updated-alola",
       "species": "wishiwashi",
       "species_label": "Wishiwashi",
       "name": "wishiwashi-solo",
@@ -2410,6 +2618,7 @@
     },
     {
       "dex_number": 134,
+      "source_pokedex": "updated-alola",
       "species": "luvdisc",
       "species_label": "Luvdisc",
       "name": "luvdisc",
@@ -2422,6 +2631,7 @@
     },
     {
       "dex_number": 135,
+      "source_pokedex": "updated-alola",
       "species": "corsola",
       "species_label": "Corsola",
       "name": "corsola",
@@ -2434,6 +2644,7 @@
     },
     {
       "dex_number": 135,
+      "source_pokedex": "updated-alola",
       "species": "corsola",
       "species_label": "Corsola",
       "name": "corsola-galar",
@@ -2446,6 +2657,7 @@
     },
     {
       "dex_number": 136,
+      "source_pokedex": "updated-alola",
       "species": "mareanie",
       "species_label": "Mareanie",
       "name": "mareanie",
@@ -2458,6 +2670,7 @@
     },
     {
       "dex_number": 137,
+      "source_pokedex": "updated-alola",
       "species": "toxapex",
       "species_label": "Toxapex",
       "name": "toxapex",
@@ -2470,6 +2683,7 @@
     },
     {
       "dex_number": 138,
+      "source_pokedex": "updated-alola",
       "species": "shellder",
       "species_label": "Shellder",
       "name": "shellder",
@@ -2482,6 +2696,7 @@
     },
     {
       "dex_number": 139,
+      "source_pokedex": "updated-alola",
       "species": "cloyster",
       "species_label": "Cloyster",
       "name": "cloyster",
@@ -2494,6 +2709,7 @@
     },
     {
       "dex_number": 140,
+      "source_pokedex": "updated-alola",
       "species": "clamperl",
       "species_label": "Clamperl",
       "name": "clamperl",
@@ -2506,6 +2722,7 @@
     },
     {
       "dex_number": 141,
+      "source_pokedex": "updated-alola",
       "species": "huntail",
       "species_label": "Huntail",
       "name": "huntail",
@@ -2518,6 +2735,7 @@
     },
     {
       "dex_number": 142,
+      "source_pokedex": "updated-alola",
       "species": "gorebyss",
       "species_label": "Gorebyss",
       "name": "gorebyss",
@@ -2530,6 +2748,7 @@
     },
     {
       "dex_number": 143,
+      "source_pokedex": "updated-alola",
       "species": "remoraid",
       "species_label": "Remoraid",
       "name": "remoraid",
@@ -2542,6 +2761,7 @@
     },
     {
       "dex_number": 144,
+      "source_pokedex": "updated-alola",
       "species": "octillery",
       "species_label": "Octillery",
       "name": "octillery",
@@ -2554,6 +2774,7 @@
     },
     {
       "dex_number": 145,
+      "source_pokedex": "updated-alola",
       "species": "mantyke",
       "species_label": "Mantyke",
       "name": "mantyke",
@@ -2566,6 +2787,7 @@
     },
     {
       "dex_number": 146,
+      "source_pokedex": "updated-alola",
       "species": "mantine",
       "species_label": "Mantine",
       "name": "mantine",
@@ -2578,6 +2800,7 @@
     },
     {
       "dex_number": 147,
+      "source_pokedex": "updated-alola",
       "species": "bagon",
       "species_label": "Bagon",
       "name": "bagon",
@@ -2590,6 +2813,7 @@
     },
     {
       "dex_number": 148,
+      "source_pokedex": "updated-alola",
       "species": "shelgon",
       "species_label": "Shelgon",
       "name": "shelgon",
@@ -2602,6 +2826,7 @@
     },
     {
       "dex_number": 149,
+      "source_pokedex": "updated-alola",
       "species": "salamence",
       "species_label": "Salamence",
       "name": "salamence",
@@ -2614,6 +2839,7 @@
     },
     {
       "dex_number": 149,
+      "source_pokedex": "updated-alola",
       "species": "salamence",
       "species_label": "Salamence",
       "name": "salamence-mega",
@@ -2626,6 +2852,7 @@
     },
     {
       "dex_number": 150,
+      "source_pokedex": "updated-alola",
       "species": "lillipup",
       "species_label": "Lillipup",
       "name": "lillipup",
@@ -2638,6 +2865,7 @@
     },
     {
       "dex_number": 151,
+      "source_pokedex": "updated-alola",
       "species": "herdier",
       "species_label": "Herdier",
       "name": "herdier",
@@ -2650,6 +2878,7 @@
     },
     {
       "dex_number": 152,
+      "source_pokedex": "updated-alola",
       "species": "stoutland",
       "species_label": "Stoutland",
       "name": "stoutland",
@@ -2662,6 +2891,7 @@
     },
     {
       "dex_number": 153,
+      "source_pokedex": "updated-alola",
       "species": "eevee",
       "species_label": "Eevee",
       "name": "eevee",
@@ -2674,6 +2904,7 @@
     },
     {
       "dex_number": 153,
+      "source_pokedex": "updated-alola",
       "species": "eevee",
       "species_label": "Eevee",
       "name": "eevee-gmax",
@@ -2686,6 +2917,7 @@
     },
     {
       "dex_number": 153,
+      "source_pokedex": "updated-alola",
       "species": "eevee",
       "species_label": "Eevee",
       "name": "eevee-starter",
@@ -2698,6 +2930,7 @@
     },
     {
       "dex_number": 154,
+      "source_pokedex": "updated-alola",
       "species": "vaporeon",
       "species_label": "Vaporeon",
       "name": "vaporeon",
@@ -2710,6 +2943,7 @@
     },
     {
       "dex_number": 155,
+      "source_pokedex": "updated-alola",
       "species": "jolteon",
       "species_label": "Jolteon",
       "name": "jolteon",
@@ -2722,6 +2956,7 @@
     },
     {
       "dex_number": 156,
+      "source_pokedex": "updated-alola",
       "species": "flareon",
       "species_label": "Flareon",
       "name": "flareon",
@@ -2734,6 +2969,7 @@
     },
     {
       "dex_number": 157,
+      "source_pokedex": "updated-alola",
       "species": "espeon",
       "species_label": "Espeon",
       "name": "espeon",
@@ -2746,6 +2982,7 @@
     },
     {
       "dex_number": 158,
+      "source_pokedex": "updated-alola",
       "species": "umbreon",
       "species_label": "Umbreon",
       "name": "umbreon",
@@ -2758,6 +2995,7 @@
     },
     {
       "dex_number": 159,
+      "source_pokedex": "updated-alola",
       "species": "leafeon",
       "species_label": "Leafeon",
       "name": "leafeon",
@@ -2770,6 +3008,7 @@
     },
     {
       "dex_number": 160,
+      "source_pokedex": "updated-alola",
       "species": "glaceon",
       "species_label": "Glaceon",
       "name": "glaceon",
@@ -2782,6 +3021,7 @@
     },
     {
       "dex_number": 161,
+      "source_pokedex": "updated-alola",
       "species": "sylveon",
       "species_label": "Sylveon",
       "name": "sylveon",
@@ -2794,6 +3034,7 @@
     },
     {
       "dex_number": 162,
+      "source_pokedex": "updated-alola",
       "species": "mareep",
       "species_label": "Mareep",
       "name": "mareep",
@@ -2806,6 +3047,7 @@
     },
     {
       "dex_number": 163,
+      "source_pokedex": "updated-alola",
       "species": "flaaffy",
       "species_label": "Flaaffy",
       "name": "flaaffy",
@@ -2818,6 +3060,7 @@
     },
     {
       "dex_number": 164,
+      "source_pokedex": "updated-alola",
       "species": "ampharos",
       "species_label": "Ampharos",
       "name": "ampharos",
@@ -2830,6 +3073,7 @@
     },
     {
       "dex_number": 164,
+      "source_pokedex": "updated-alola",
       "species": "ampharos",
       "species_label": "Ampharos",
       "name": "ampharos-mega",
@@ -2842,6 +3086,7 @@
     },
     {
       "dex_number": 165,
+      "source_pokedex": "updated-alola",
       "species": "mudbray",
       "species_label": "Mudbray",
       "name": "mudbray",
@@ -2854,6 +3099,7 @@
     },
     {
       "dex_number": 166,
+      "source_pokedex": "updated-alola",
       "species": "mudsdale",
       "species_label": "Mudsdale",
       "name": "mudsdale",
@@ -2866,6 +3112,7 @@
     },
     {
       "dex_number": 167,
+      "source_pokedex": "updated-alola",
       "species": "igglybuff",
       "species_label": "Igglybuff",
       "name": "igglybuff",
@@ -2878,6 +3125,7 @@
     },
     {
       "dex_number": 168,
+      "source_pokedex": "updated-alola",
       "species": "jigglypuff",
       "species_label": "Jigglypuff",
       "name": "jigglypuff",
@@ -2890,6 +3138,7 @@
     },
     {
       "dex_number": 169,
+      "source_pokedex": "updated-alola",
       "species": "wigglytuff",
       "species_label": "Wigglytuff",
       "name": "wigglytuff",
@@ -2902,6 +3151,7 @@
     },
     {
       "dex_number": 170,
+      "source_pokedex": "updated-alola",
       "species": "tauros",
       "species_label": "Tauros",
       "name": "tauros",
@@ -2914,6 +3164,7 @@
     },
     {
       "dex_number": 170,
+      "source_pokedex": "updated-alola",
       "species": "tauros",
       "species_label": "Tauros",
       "name": "tauros-paldea-aqua-breed",
@@ -2926,6 +3177,7 @@
     },
     {
       "dex_number": 170,
+      "source_pokedex": "updated-alola",
       "species": "tauros",
       "species_label": "Tauros",
       "name": "tauros-paldea-blaze-breed",
@@ -2938,6 +3190,7 @@
     },
     {
       "dex_number": 170,
+      "source_pokedex": "updated-alola",
       "species": "tauros",
       "species_label": "Tauros",
       "name": "tauros-paldea-combat-breed",
@@ -2950,6 +3203,7 @@
     },
     {
       "dex_number": 171,
+      "source_pokedex": "updated-alola",
       "species": "miltank",
       "species_label": "Miltank",
       "name": "miltank",
@@ -2962,6 +3216,7 @@
     },
     {
       "dex_number": 172,
+      "source_pokedex": "updated-alola",
       "species": "surskit",
       "species_label": "Surskit",
       "name": "surskit",
@@ -2974,6 +3229,7 @@
     },
     {
       "dex_number": 173,
+      "source_pokedex": "updated-alola",
       "species": "masquerain",
       "species_label": "Masquerain",
       "name": "masquerain",
@@ -2986,6 +3242,7 @@
     },
     {
       "dex_number": 174,
+      "source_pokedex": "updated-alola",
       "species": "dewpider",
       "species_label": "Dewpider",
       "name": "dewpider",
@@ -2998,6 +3255,7 @@
     },
     {
       "dex_number": 175,
+      "source_pokedex": "updated-alola",
       "species": "araquanid",
       "species_label": "Araquanid",
       "name": "araquanid",
@@ -3010,6 +3268,7 @@
     },
     {
       "dex_number": 175,
+      "source_pokedex": "updated-alola",
       "species": "araquanid",
       "species_label": "Araquanid",
       "name": "araquanid-totem",
@@ -3022,6 +3281,7 @@
     },
     {
       "dex_number": 176,
+      "source_pokedex": "updated-alola",
       "species": "fomantis",
       "species_label": "Fomantis",
       "name": "fomantis",
@@ -3034,6 +3294,7 @@
     },
     {
       "dex_number": 177,
+      "source_pokedex": "updated-alola",
       "species": "lurantis",
       "species_label": "Lurantis",
       "name": "lurantis",
@@ -3046,6 +3307,7 @@
     },
     {
       "dex_number": 177,
+      "source_pokedex": "updated-alola",
       "species": "lurantis",
       "species_label": "Lurantis",
       "name": "lurantis-totem",
@@ -3058,6 +3320,7 @@
     },
     {
       "dex_number": 178,
+      "source_pokedex": "updated-alola",
       "species": "morelull",
       "species_label": "Morelull",
       "name": "morelull",
@@ -3070,6 +3333,7 @@
     },
     {
       "dex_number": 179,
+      "source_pokedex": "updated-alola",
       "species": "shiinotic",
       "species_label": "Shiinotic",
       "name": "shiinotic",
@@ -3082,6 +3346,7 @@
     },
     {
       "dex_number": 180,
+      "source_pokedex": "updated-alola",
       "species": "paras",
       "species_label": "Paras",
       "name": "paras",
@@ -3094,6 +3359,7 @@
     },
     {
       "dex_number": 181,
+      "source_pokedex": "updated-alola",
       "species": "parasect",
       "species_label": "Parasect",
       "name": "parasect",
@@ -3106,6 +3372,7 @@
     },
     {
       "dex_number": 182,
+      "source_pokedex": "updated-alola",
       "species": "poliwag",
       "species_label": "Poliwag",
       "name": "poliwag",
@@ -3118,6 +3385,7 @@
     },
     {
       "dex_number": 183,
+      "source_pokedex": "updated-alola",
       "species": "poliwhirl",
       "species_label": "Poliwhirl",
       "name": "poliwhirl",
@@ -3130,6 +3398,7 @@
     },
     {
       "dex_number": 184,
+      "source_pokedex": "updated-alola",
       "species": "poliwrath",
       "species_label": "Poliwrath",
       "name": "poliwrath",
@@ -3142,6 +3411,7 @@
     },
     {
       "dex_number": 185,
+      "source_pokedex": "updated-alola",
       "species": "politoed",
       "species_label": "Politoed",
       "name": "politoed",
@@ -3154,6 +3424,7 @@
     },
     {
       "dex_number": 186,
+      "source_pokedex": "updated-alola",
       "species": "goldeen",
       "species_label": "Goldeen",
       "name": "goldeen",
@@ -3166,6 +3437,7 @@
     },
     {
       "dex_number": 187,
+      "source_pokedex": "updated-alola",
       "species": "seaking",
       "species_label": "Seaking",
       "name": "seaking",
@@ -3178,6 +3450,7 @@
     },
     {
       "dex_number": 188,
+      "source_pokedex": "updated-alola",
       "species": "basculin",
       "species_label": "Basculin",
       "name": "basculin-blue-striped",
@@ -3190,6 +3463,7 @@
     },
     {
       "dex_number": 188,
+      "source_pokedex": "updated-alola",
       "species": "basculin",
       "species_label": "Basculin",
       "name": "basculin-red-striped",
@@ -3202,6 +3476,7 @@
     },
     {
       "dex_number": 188,
+      "source_pokedex": "updated-alola",
       "species": "basculin",
       "species_label": "Basculin",
       "name": "basculin-white-striped",
@@ -3214,6 +3489,7 @@
     },
     {
       "dex_number": 189,
+      "source_pokedex": "updated-alola",
       "species": "feebas",
       "species_label": "Feebas",
       "name": "feebas",
@@ -3226,6 +3502,7 @@
     },
     {
       "dex_number": 190,
+      "source_pokedex": "updated-alola",
       "species": "milotic",
       "species_label": "Milotic",
       "name": "milotic",
@@ -3238,6 +3515,7 @@
     },
     {
       "dex_number": 191,
+      "source_pokedex": "updated-alola",
       "species": "alomomola",
       "species_label": "Alomomola",
       "name": "alomomola",
@@ -3250,6 +3528,7 @@
     },
     {
       "dex_number": 192,
+      "source_pokedex": "updated-alola",
       "species": "fletchling",
       "species_label": "Fletchling",
       "name": "fletchling",
@@ -3262,6 +3541,7 @@
     },
     {
       "dex_number": 193,
+      "source_pokedex": "updated-alola",
       "species": "fletchinder",
       "species_label": "Fletchinder",
       "name": "fletchinder",
@@ -3274,6 +3554,7 @@
     },
     {
       "dex_number": 194,
+      "source_pokedex": "updated-alola",
       "species": "talonflame",
       "species_label": "Talonflame",
       "name": "talonflame",
@@ -3286,6 +3567,7 @@
     },
     {
       "dex_number": 195,
+      "source_pokedex": "updated-alola",
       "species": "salandit",
       "species_label": "Salandit",
       "name": "salandit",
@@ -3298,6 +3580,7 @@
     },
     {
       "dex_number": 196,
+      "source_pokedex": "updated-alola",
       "species": "salazzle",
       "species_label": "Salazzle",
       "name": "salazzle",
@@ -3310,6 +3593,7 @@
     },
     {
       "dex_number": 196,
+      "source_pokedex": "updated-alola",
       "species": "salazzle",
       "species_label": "Salazzle",
       "name": "salazzle-totem",
@@ -3322,6 +3606,7 @@
     },
     {
       "dex_number": 197,
+      "source_pokedex": "updated-alola",
       "species": "cubone",
       "species_label": "Cubone",
       "name": "cubone",
@@ -3334,6 +3619,7 @@
     },
     {
       "dex_number": 198,
+      "source_pokedex": "updated-alola",
       "species": "marowak",
       "species_label": "Marowak",
       "name": "marowak",
@@ -3346,6 +3632,7 @@
     },
     {
       "dex_number": 198,
+      "source_pokedex": "updated-alola",
       "species": "marowak",
       "species_label": "Marowak",
       "name": "marowak-alola",
@@ -3358,6 +3645,7 @@
     },
     {
       "dex_number": 198,
+      "source_pokedex": "updated-alola",
       "species": "marowak",
       "species_label": "Marowak",
       "name": "marowak-totem",
@@ -3370,6 +3658,7 @@
     },
     {
       "dex_number": 199,
+      "source_pokedex": "updated-alola",
       "species": "kangaskhan",
       "species_label": "Kangaskhan",
       "name": "kangaskhan",
@@ -3382,6 +3671,7 @@
     },
     {
       "dex_number": 199,
+      "source_pokedex": "updated-alola",
       "species": "kangaskhan",
       "species_label": "Kangaskhan",
       "name": "kangaskhan-mega",
@@ -3394,6 +3684,7 @@
     },
     {
       "dex_number": 200,
+      "source_pokedex": "updated-alola",
       "species": "magby",
       "species_label": "Magby",
       "name": "magby",
@@ -3406,6 +3697,7 @@
     },
     {
       "dex_number": 201,
+      "source_pokedex": "updated-alola",
       "species": "magmar",
       "species_label": "Magmar",
       "name": "magmar",
@@ -3418,6 +3710,7 @@
     },
     {
       "dex_number": 202,
+      "source_pokedex": "updated-alola",
       "species": "magmortar",
       "species_label": "Magmortar",
       "name": "magmortar",
@@ -3430,6 +3723,7 @@
     },
     {
       "dex_number": 203,
+      "source_pokedex": "updated-alola",
       "species": "larvesta",
       "species_label": "Larvesta",
       "name": "larvesta",
@@ -3442,6 +3736,7 @@
     },
     {
       "dex_number": 204,
+      "source_pokedex": "updated-alola",
       "species": "volcarona",
       "species_label": "Volcarona",
       "name": "volcarona",
@@ -3454,6 +3749,7 @@
     },
     {
       "dex_number": 205,
+      "source_pokedex": "updated-alola",
       "species": "stufful",
       "species_label": "Stufful",
       "name": "stufful",
@@ -3466,6 +3762,7 @@
     },
     {
       "dex_number": 206,
+      "source_pokedex": "updated-alola",
       "species": "bewear",
       "species_label": "Bewear",
       "name": "bewear",
@@ -3478,6 +3775,7 @@
     },
     {
       "dex_number": 207,
+      "source_pokedex": "updated-alola",
       "species": "bounsweet",
       "species_label": "Bounsweet",
       "name": "bounsweet",
@@ -3490,6 +3788,7 @@
     },
     {
       "dex_number": 208,
+      "source_pokedex": "updated-alola",
       "species": "steenee",
       "species_label": "Steenee",
       "name": "steenee",
@@ -3502,6 +3801,7 @@
     },
     {
       "dex_number": 209,
+      "source_pokedex": "updated-alola",
       "species": "tsareena",
       "species_label": "Tsareena",
       "name": "tsareena",
@@ -3514,6 +3814,7 @@
     },
     {
       "dex_number": 210,
+      "source_pokedex": "updated-alola",
       "species": "comfey",
       "species_label": "Comfey",
       "name": "comfey",
@@ -3526,6 +3827,7 @@
     },
     {
       "dex_number": 211,
+      "source_pokedex": "updated-alola",
       "species": "pinsir",
       "species_label": "Pinsir",
       "name": "pinsir",
@@ -3538,6 +3840,7 @@
     },
     {
       "dex_number": 211,
+      "source_pokedex": "updated-alola",
       "species": "pinsir",
       "species_label": "Pinsir",
       "name": "pinsir-mega",
@@ -3550,6 +3853,7 @@
     },
     {
       "dex_number": 212,
+      "source_pokedex": "updated-alola",
       "species": "hoothoot",
       "species_label": "Hoothoot",
       "name": "hoothoot",
@@ -3562,6 +3866,7 @@
     },
     {
       "dex_number": 213,
+      "source_pokedex": "updated-alola",
       "species": "noctowl",
       "species_label": "Noctowl",
       "name": "noctowl",
@@ -3574,6 +3879,7 @@
     },
     {
       "dex_number": 214,
+      "source_pokedex": "updated-alola",
       "species": "kecleon",
       "species_label": "Kecleon",
       "name": "kecleon",
@@ -3586,6 +3892,7 @@
     },
     {
       "dex_number": 215,
+      "source_pokedex": "updated-alola",
       "species": "oranguru",
       "species_label": "Oranguru",
       "name": "oranguru",
@@ -3598,6 +3905,7 @@
     },
     {
       "dex_number": 216,
+      "source_pokedex": "updated-alola",
       "species": "passimian",
       "species_label": "Passimian",
       "name": "passimian",
@@ -3610,6 +3918,7 @@
     },
     {
       "dex_number": 217,
+      "source_pokedex": "updated-alola",
       "species": "goomy",
       "species_label": "Goomy",
       "name": "goomy",
@@ -3622,6 +3931,7 @@
     },
     {
       "dex_number": 218,
+      "source_pokedex": "updated-alola",
       "species": "sliggoo",
       "species_label": "Sliggoo",
       "name": "sliggoo",
@@ -3634,6 +3944,7 @@
     },
     {
       "dex_number": 218,
+      "source_pokedex": "updated-alola",
       "species": "sliggoo",
       "species_label": "Sliggoo",
       "name": "sliggoo-hisui",
@@ -3646,6 +3957,7 @@
     },
     {
       "dex_number": 219,
+      "source_pokedex": "updated-alola",
       "species": "goodra",
       "species_label": "Goodra",
       "name": "goodra",
@@ -3658,6 +3970,7 @@
     },
     {
       "dex_number": 219,
+      "source_pokedex": "updated-alola",
       "species": "goodra",
       "species_label": "Goodra",
       "name": "goodra-hisui",
@@ -3670,6 +3983,7 @@
     },
     {
       "dex_number": 220,
+      "source_pokedex": "updated-alola",
       "species": "castform",
       "species_label": "Castform",
       "name": "castform",
@@ -3682,6 +3996,7 @@
     },
     {
       "dex_number": 220,
+      "source_pokedex": "updated-alola",
       "species": "castform",
       "species_label": "Castform",
       "name": "castform-rainy",
@@ -3694,6 +4009,7 @@
     },
     {
       "dex_number": 220,
+      "source_pokedex": "updated-alola",
       "species": "castform",
       "species_label": "Castform",
       "name": "castform-snowy",
@@ -3706,6 +4022,7 @@
     },
     {
       "dex_number": 220,
+      "source_pokedex": "updated-alola",
       "species": "castform",
       "species_label": "Castform",
       "name": "castform-sunny",
@@ -3718,6 +4035,7 @@
     },
     {
       "dex_number": 221,
+      "source_pokedex": "updated-alola",
       "species": "wimpod",
       "species_label": "Wimpod",
       "name": "wimpod",
@@ -3730,6 +4048,7 @@
     },
     {
       "dex_number": 222,
+      "source_pokedex": "updated-alola",
       "species": "golisopod",
       "species_label": "Golisopod",
       "name": "golisopod",
@@ -3742,6 +4061,7 @@
     },
     {
       "dex_number": 222,
+      "source_pokedex": "updated-alola",
       "species": "golisopod",
       "species_label": "Golisopod",
       "name": "golisopod-mega",
@@ -3754,6 +4074,7 @@
     },
     {
       "dex_number": 223,
+      "source_pokedex": "updated-alola",
       "species": "staryu",
       "species_label": "Staryu",
       "name": "staryu",
@@ -3766,6 +4087,7 @@
     },
     {
       "dex_number": 224,
+      "source_pokedex": "updated-alola",
       "species": "starmie",
       "species_label": "Starmie",
       "name": "starmie",
@@ -3778,6 +4100,7 @@
     },
     {
       "dex_number": 224,
+      "source_pokedex": "updated-alola",
       "species": "starmie",
       "species_label": "Starmie",
       "name": "starmie-mega",
@@ -3790,6 +4113,7 @@
     },
     {
       "dex_number": 225,
+      "source_pokedex": "updated-alola",
       "species": "sandygast",
       "species_label": "Sandygast",
       "name": "sandygast",
@@ -3802,6 +4126,7 @@
     },
     {
       "dex_number": 226,
+      "source_pokedex": "updated-alola",
       "species": "palossand",
       "species_label": "Palossand",
       "name": "palossand",
@@ -3814,6 +4139,7 @@
     },
     {
       "dex_number": 227,
+      "source_pokedex": "updated-alola",
       "species": "omanyte",
       "species_label": "Omanyte",
       "name": "omanyte",
@@ -3826,6 +4152,7 @@
     },
     {
       "dex_number": 228,
+      "source_pokedex": "updated-alola",
       "species": "omastar",
       "species_label": "Omastar",
       "name": "omastar",
@@ -3838,6 +4165,7 @@
     },
     {
       "dex_number": 229,
+      "source_pokedex": "updated-alola",
       "species": "kabuto",
       "species_label": "Kabuto",
       "name": "kabuto",
@@ -3850,6 +4178,7 @@
     },
     {
       "dex_number": 230,
+      "source_pokedex": "updated-alola",
       "species": "kabutops",
       "species_label": "Kabutops",
       "name": "kabutops",
@@ -3862,6 +4191,7 @@
     },
     {
       "dex_number": 231,
+      "source_pokedex": "updated-alola",
       "species": "lileep",
       "species_label": "Lileep",
       "name": "lileep",
@@ -3874,6 +4204,7 @@
     },
     {
       "dex_number": 232,
+      "source_pokedex": "updated-alola",
       "species": "cradily",
       "species_label": "Cradily",
       "name": "cradily",
@@ -3886,6 +4217,7 @@
     },
     {
       "dex_number": 233,
+      "source_pokedex": "updated-alola",
       "species": "anorith",
       "species_label": "Anorith",
       "name": "anorith",
@@ -3898,6 +4230,7 @@
     },
     {
       "dex_number": 234,
+      "source_pokedex": "updated-alola",
       "species": "armaldo",
       "species_label": "Armaldo",
       "name": "armaldo",
@@ -3910,6 +4243,7 @@
     },
     {
       "dex_number": 235,
+      "source_pokedex": "updated-alola",
       "species": "cranidos",
       "species_label": "Cranidos",
       "name": "cranidos",
@@ -3922,6 +4256,7 @@
     },
     {
       "dex_number": 236,
+      "source_pokedex": "updated-alola",
       "species": "rampardos",
       "species_label": "Rampardos",
       "name": "rampardos",
@@ -3934,6 +4269,7 @@
     },
     {
       "dex_number": 237,
+      "source_pokedex": "updated-alola",
       "species": "shieldon",
       "species_label": "Shieldon",
       "name": "shieldon",
@@ -3946,6 +4282,7 @@
     },
     {
       "dex_number": 238,
+      "source_pokedex": "updated-alola",
       "species": "bastiodon",
       "species_label": "Bastiodon",
       "name": "bastiodon",
@@ -3958,6 +4295,7 @@
     },
     {
       "dex_number": 239,
+      "source_pokedex": "updated-alola",
       "species": "archen",
       "species_label": "Archen",
       "name": "archen",
@@ -3970,6 +4308,7 @@
     },
     {
       "dex_number": 240,
+      "source_pokedex": "updated-alola",
       "species": "archeops",
       "species_label": "Archeops",
       "name": "archeops",
@@ -3982,6 +4321,7 @@
     },
     {
       "dex_number": 241,
+      "source_pokedex": "updated-alola",
       "species": "tirtouga",
       "species_label": "Tirtouga",
       "name": "tirtouga",
@@ -3994,6 +4334,7 @@
     },
     {
       "dex_number": 242,
+      "source_pokedex": "updated-alola",
       "species": "carracosta",
       "species_label": "Carracosta",
       "name": "carracosta",
@@ -4006,6 +4347,7 @@
     },
     {
       "dex_number": 243,
+      "source_pokedex": "updated-alola",
       "species": "tyrunt",
       "species_label": "Tyrunt",
       "name": "tyrunt",
@@ -4018,6 +4360,7 @@
     },
     {
       "dex_number": 244,
+      "source_pokedex": "updated-alola",
       "species": "tyrantrum",
       "species_label": "Tyrantrum",
       "name": "tyrantrum",
@@ -4030,6 +4373,7 @@
     },
     {
       "dex_number": 245,
+      "source_pokedex": "updated-alola",
       "species": "amaura",
       "species_label": "Amaura",
       "name": "amaura",
@@ -4042,6 +4386,7 @@
     },
     {
       "dex_number": 246,
+      "source_pokedex": "updated-alola",
       "species": "aurorus",
       "species_label": "Aurorus",
       "name": "aurorus",
@@ -4054,6 +4399,7 @@
     },
     {
       "dex_number": 247,
+      "source_pokedex": "updated-alola",
       "species": "larvitar",
       "species_label": "Larvitar",
       "name": "larvitar",
@@ -4066,6 +4412,7 @@
     },
     {
       "dex_number": 248,
+      "source_pokedex": "updated-alola",
       "species": "pupitar",
       "species_label": "Pupitar",
       "name": "pupitar",
@@ -4078,6 +4425,7 @@
     },
     {
       "dex_number": 249,
+      "source_pokedex": "updated-alola",
       "species": "tyranitar",
       "species_label": "Tyranitar",
       "name": "tyranitar",
@@ -4090,6 +4438,7 @@
     },
     {
       "dex_number": 249,
+      "source_pokedex": "updated-alola",
       "species": "tyranitar",
       "species_label": "Tyranitar",
       "name": "tyranitar-mega",
@@ -4102,6 +4451,7 @@
     },
     {
       "dex_number": 250,
+      "source_pokedex": "updated-alola",
       "species": "phantump",
       "species_label": "Phantump",
       "name": "phantump",
@@ -4114,6 +4464,7 @@
     },
     {
       "dex_number": 251,
+      "source_pokedex": "updated-alola",
       "species": "trevenant",
       "species_label": "Trevenant",
       "name": "trevenant",
@@ -4126,6 +4477,7 @@
     },
     {
       "dex_number": 252,
+      "source_pokedex": "updated-alola",
       "species": "natu",
       "species_label": "Natu",
       "name": "natu",
@@ -4138,6 +4490,7 @@
     },
     {
       "dex_number": 253,
+      "source_pokedex": "updated-alola",
       "species": "xatu",
       "species_label": "Xatu",
       "name": "xatu",
@@ -4150,6 +4503,7 @@
     },
     {
       "dex_number": 254,
+      "source_pokedex": "updated-alola",
       "species": "nosepass",
       "species_label": "Nosepass",
       "name": "nosepass",
@@ -4162,6 +4516,7 @@
     },
     {
       "dex_number": 255,
+      "source_pokedex": "updated-alola",
       "species": "probopass",
       "species_label": "Probopass",
       "name": "probopass",
@@ -4174,6 +4529,7 @@
     },
     {
       "dex_number": 256,
+      "source_pokedex": "updated-alola",
       "species": "pyukumuku",
       "species_label": "Pyukumuku",
       "name": "pyukumuku",
@@ -4186,6 +4542,7 @@
     },
     {
       "dex_number": 257,
+      "source_pokedex": "updated-alola",
       "species": "chinchou",
       "species_label": "Chinchou",
       "name": "chinchou",
@@ -4198,6 +4555,7 @@
     },
     {
       "dex_number": 258,
+      "source_pokedex": "updated-alola",
       "species": "lanturn",
       "species_label": "Lanturn",
       "name": "lanturn",
@@ -4210,6 +4568,7 @@
     },
     {
       "dex_number": 259,
+      "source_pokedex": "updated-alola",
       "species": "type-null",
       "species_label": "Type: Null",
       "name": "type-null",
@@ -4222,6 +4581,7 @@
     },
     {
       "dex_number": 260,
+      "source_pokedex": "updated-alola",
       "species": "silvally",
       "species_label": "Silvally",
       "name": "silvally",
@@ -4234,6 +4594,7 @@
     },
     {
       "dex_number": 261,
+      "source_pokedex": "updated-alola",
       "species": "poipole",
       "species_label": "Poipole",
       "name": "poipole",
@@ -4246,6 +4607,7 @@
     },
     {
       "dex_number": 262,
+      "source_pokedex": "updated-alola",
       "species": "naganadel",
       "species_label": "Naganadel",
       "name": "naganadel",
@@ -4258,6 +4620,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-10",
@@ -4270,6 +4633,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-10-power-construct",
@@ -4282,6 +4646,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-50",
@@ -4294,6 +4659,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-50-power-construct",
@@ -4306,6 +4672,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-complete",
@@ -4318,6 +4685,7 @@
     },
     {
       "dex_number": 263,
+      "source_pokedex": "updated-alola",
       "species": "zygarde",
       "species_label": "Zygarde",
       "name": "zygarde-mega",
@@ -4330,6 +4698,7 @@
     },
     {
       "dex_number": 264,
+      "source_pokedex": "updated-alola",
       "species": "trubbish",
       "species_label": "Trubbish",
       "name": "trubbish",
@@ -4342,6 +4711,7 @@
     },
     {
       "dex_number": 265,
+      "source_pokedex": "updated-alola",
       "species": "garbodor",
       "species_label": "Garbodor",
       "name": "garbodor",
@@ -4354,6 +4724,7 @@
     },
     {
       "dex_number": 265,
+      "source_pokedex": "updated-alola",
       "species": "garbodor",
       "species_label": "Garbodor",
       "name": "garbodor-gmax",
@@ -4366,6 +4737,7 @@
     },
     {
       "dex_number": 266,
+      "source_pokedex": "updated-alola",
       "species": "minccino",
       "species_label": "Minccino",
       "name": "minccino",
@@ -4378,6 +4750,7 @@
     },
     {
       "dex_number": 267,
+      "source_pokedex": "updated-alola",
       "species": "cinccino",
       "species_label": "Cinccino",
       "name": "cinccino",
@@ -4390,6 +4763,7 @@
     },
     {
       "dex_number": 268,
+      "source_pokedex": "updated-alola",
       "species": "pineco",
       "species_label": "Pineco",
       "name": "pineco",
@@ -4402,6 +4776,7 @@
     },
     {
       "dex_number": 269,
+      "source_pokedex": "updated-alola",
       "species": "forretress",
       "species_label": "Forretress",
       "name": "forretress",
@@ -4414,6 +4789,7 @@
     },
     {
       "dex_number": 270,
+      "source_pokedex": "updated-alola",
       "species": "skarmory",
       "species_label": "Skarmory",
       "name": "skarmory",
@@ -4426,6 +4802,7 @@
     },
     {
       "dex_number": 270,
+      "source_pokedex": "updated-alola",
       "species": "skarmory",
       "species_label": "Skarmory",
       "name": "skarmory-mega",
@@ -4438,6 +4815,7 @@
     },
     {
       "dex_number": 271,
+      "source_pokedex": "updated-alola",
       "species": "ditto",
       "species_label": "Ditto",
       "name": "ditto",
@@ -4450,6 +4828,7 @@
     },
     {
       "dex_number": 272,
+      "source_pokedex": "updated-alola",
       "species": "cleffa",
       "species_label": "Cleffa",
       "name": "cleffa",
@@ -4462,6 +4841,7 @@
     },
     {
       "dex_number": 273,
+      "source_pokedex": "updated-alola",
       "species": "clefairy",
       "species_label": "Clefairy",
       "name": "clefairy",
@@ -4474,6 +4854,7 @@
     },
     {
       "dex_number": 274,
+      "source_pokedex": "updated-alola",
       "species": "clefable",
       "species_label": "Clefable",
       "name": "clefable",
@@ -4486,6 +4867,7 @@
     },
     {
       "dex_number": 274,
+      "source_pokedex": "updated-alola",
       "species": "clefable",
       "species_label": "Clefable",
       "name": "clefable-mega",
@@ -4498,6 +4880,7 @@
     },
     {
       "dex_number": 275,
+      "source_pokedex": "updated-alola",
       "species": "elgyem",
       "species_label": "Elgyem",
       "name": "elgyem",
@@ -4510,6 +4893,7 @@
     },
     {
       "dex_number": 276,
+      "source_pokedex": "updated-alola",
       "species": "beheeyem",
       "species_label": "Beheeyem",
       "name": "beheeyem",
@@ -4522,6 +4906,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-blue",
@@ -4534,6 +4919,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-blue-meteor",
@@ -4546,6 +4932,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-green",
@@ -4558,6 +4945,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-green-meteor",
@@ -4570,6 +4958,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-indigo",
@@ -4582,6 +4971,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-indigo-meteor",
@@ -4594,6 +4984,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-orange",
@@ -4606,6 +4997,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-orange-meteor",
@@ -4618,6 +5010,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-red",
@@ -4630,6 +5023,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-red-meteor",
@@ -4642,6 +5036,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-violet",
@@ -4654,6 +5049,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-violet-meteor",
@@ -4666,6 +5062,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-yellow",
@@ -4678,6 +5075,7 @@
     },
     {
       "dex_number": 277,
+      "source_pokedex": "updated-alola",
       "species": "minior",
       "species_label": "Minior",
       "name": "minior-yellow-meteor",
@@ -4690,6 +5088,7 @@
     },
     {
       "dex_number": 278,
+      "source_pokedex": "updated-alola",
       "species": "beldum",
       "species_label": "Beldum",
       "name": "beldum",
@@ -4702,6 +5101,7 @@
     },
     {
       "dex_number": 279,
+      "source_pokedex": "updated-alola",
       "species": "metang",
       "species_label": "Metang",
       "name": "metang",
@@ -4714,6 +5114,7 @@
     },
     {
       "dex_number": 280,
+      "source_pokedex": "updated-alola",
       "species": "metagross",
       "species_label": "Metagross",
       "name": "metagross",
@@ -4726,6 +5127,7 @@
     },
     {
       "dex_number": 280,
+      "source_pokedex": "updated-alola",
       "species": "metagross",
       "species_label": "Metagross",
       "name": "metagross-mega",
@@ -4738,6 +5140,7 @@
     },
     {
       "dex_number": 281,
+      "source_pokedex": "updated-alola",
       "species": "porygon",
       "species_label": "Porygon",
       "name": "porygon",
@@ -4750,6 +5153,7 @@
     },
     {
       "dex_number": 282,
+      "source_pokedex": "updated-alola",
       "species": "porygon2",
       "species_label": "Porygon2",
       "name": "porygon2",
@@ -4762,6 +5166,7 @@
     },
     {
       "dex_number": 283,
+      "source_pokedex": "updated-alola",
       "species": "porygon-z",
       "species_label": "Porygon-Z",
       "name": "porygon-z",
@@ -4774,6 +5179,7 @@
     },
     {
       "dex_number": 284,
+      "source_pokedex": "updated-alola",
       "species": "pancham",
       "species_label": "Pancham",
       "name": "pancham",
@@ -4786,6 +5192,7 @@
     },
     {
       "dex_number": 285,
+      "source_pokedex": "updated-alola",
       "species": "pangoro",
       "species_label": "Pangoro",
       "name": "pangoro",
@@ -4798,6 +5205,7 @@
     },
     {
       "dex_number": 286,
+      "source_pokedex": "updated-alola",
       "species": "komala",
       "species_label": "Komala",
       "name": "komala",
@@ -4810,6 +5218,7 @@
     },
     {
       "dex_number": 287,
+      "source_pokedex": "updated-alola",
       "species": "torkoal",
       "species_label": "Torkoal",
       "name": "torkoal",
@@ -4822,6 +5231,7 @@
     },
     {
       "dex_number": 288,
+      "source_pokedex": "updated-alola",
       "species": "turtonator",
       "species_label": "Turtonator",
       "name": "turtonator",
@@ -4834,6 +5244,7 @@
     },
     {
       "dex_number": 289,
+      "source_pokedex": "updated-alola",
       "species": "houndour",
       "species_label": "Houndour",
       "name": "houndour",
@@ -4846,6 +5257,7 @@
     },
     {
       "dex_number": 290,
+      "source_pokedex": "updated-alola",
       "species": "houndoom",
       "species_label": "Houndoom",
       "name": "houndoom",
@@ -4858,6 +5270,7 @@
     },
     {
       "dex_number": 290,
+      "source_pokedex": "updated-alola",
       "species": "houndoom",
       "species_label": "Houndoom",
       "name": "houndoom-mega",
@@ -4870,6 +5283,7 @@
     },
     {
       "dex_number": 291,
+      "source_pokedex": "updated-alola",
       "species": "dedenne",
       "species_label": "Dedenne",
       "name": "dedenne",
@@ -4882,6 +5296,7 @@
     },
     {
       "dex_number": 292,
+      "source_pokedex": "updated-alola",
       "species": "togedemaru",
       "species_label": "Togedemaru",
       "name": "togedemaru",
@@ -4894,6 +5309,7 @@
     },
     {
       "dex_number": 292,
+      "source_pokedex": "updated-alola",
       "species": "togedemaru",
       "species_label": "Togedemaru",
       "name": "togedemaru-totem",
@@ -4906,6 +5322,7 @@
     },
     {
       "dex_number": 293,
+      "source_pokedex": "updated-alola",
       "species": "electrike",
       "species_label": "Electrike",
       "name": "electrike",
@@ -4918,6 +5335,7 @@
     },
     {
       "dex_number": 294,
+      "source_pokedex": "updated-alola",
       "species": "manectric",
       "species_label": "Manectric",
       "name": "manectric",
@@ -4930,6 +5348,7 @@
     },
     {
       "dex_number": 294,
+      "source_pokedex": "updated-alola",
       "species": "manectric",
       "species_label": "Manectric",
       "name": "manectric-mega",
@@ -4942,6 +5361,7 @@
     },
     {
       "dex_number": 295,
+      "source_pokedex": "updated-alola",
       "species": "elekid",
       "species_label": "Elekid",
       "name": "elekid",
@@ -4954,6 +5374,7 @@
     },
     {
       "dex_number": 296,
+      "source_pokedex": "updated-alola",
       "species": "electabuzz",
       "species_label": "Electabuzz",
       "name": "electabuzz",
@@ -4966,6 +5387,7 @@
     },
     {
       "dex_number": 297,
+      "source_pokedex": "updated-alola",
       "species": "electivire",
       "species_label": "Electivire",
       "name": "electivire",
@@ -4978,6 +5400,7 @@
     },
     {
       "dex_number": 298,
+      "source_pokedex": "updated-alola",
       "species": "geodude",
       "species_label": "Geodude",
       "name": "geodude",
@@ -4990,6 +5413,7 @@
     },
     {
       "dex_number": 298,
+      "source_pokedex": "updated-alola",
       "species": "geodude",
       "species_label": "Geodude",
       "name": "geodude-alola",
@@ -5002,6 +5426,7 @@
     },
     {
       "dex_number": 299,
+      "source_pokedex": "updated-alola",
       "species": "graveler",
       "species_label": "Graveler",
       "name": "graveler",
@@ -5014,6 +5439,7 @@
     },
     {
       "dex_number": 299,
+      "source_pokedex": "updated-alola",
       "species": "graveler",
       "species_label": "Graveler",
       "name": "graveler-alola",
@@ -5026,6 +5452,7 @@
     },
     {
       "dex_number": 300,
+      "source_pokedex": "updated-alola",
       "species": "golem",
       "species_label": "Golem",
       "name": "golem",
@@ -5038,6 +5465,7 @@
     },
     {
       "dex_number": 300,
+      "source_pokedex": "updated-alola",
       "species": "golem",
       "species_label": "Golem",
       "name": "golem-alola",
@@ -5050,6 +5478,7 @@
     },
     {
       "dex_number": 301,
+      "source_pokedex": "updated-alola",
       "species": "sandile",
       "species_label": "Sandile",
       "name": "sandile",
@@ -5062,6 +5491,7 @@
     },
     {
       "dex_number": 302,
+      "source_pokedex": "updated-alola",
       "species": "krokorok",
       "species_label": "Krokorok",
       "name": "krokorok",
@@ -5074,6 +5504,7 @@
     },
     {
       "dex_number": 303,
+      "source_pokedex": "updated-alola",
       "species": "krookodile",
       "species_label": "Krookodile",
       "name": "krookodile",
@@ -5086,6 +5517,7 @@
     },
     {
       "dex_number": 304,
+      "source_pokedex": "updated-alola",
       "species": "trapinch",
       "species_label": "Trapinch",
       "name": "trapinch",
@@ -5098,6 +5530,7 @@
     },
     {
       "dex_number": 305,
+      "source_pokedex": "updated-alola",
       "species": "vibrava",
       "species_label": "Vibrava",
       "name": "vibrava",
@@ -5110,6 +5543,7 @@
     },
     {
       "dex_number": 306,
+      "source_pokedex": "updated-alola",
       "species": "flygon",
       "species_label": "Flygon",
       "name": "flygon",
@@ -5122,6 +5556,7 @@
     },
     {
       "dex_number": 307,
+      "source_pokedex": "updated-alola",
       "species": "gible",
       "species_label": "Gible",
       "name": "gible",
@@ -5134,6 +5569,7 @@
     },
     {
       "dex_number": 308,
+      "source_pokedex": "updated-alola",
       "species": "gabite",
       "species_label": "Gabite",
       "name": "gabite",
@@ -5146,6 +5582,7 @@
     },
     {
       "dex_number": 309,
+      "source_pokedex": "updated-alola",
       "species": "garchomp",
       "species_label": "Garchomp",
       "name": "garchomp",
@@ -5158,6 +5595,7 @@
     },
     {
       "dex_number": 309,
+      "source_pokedex": "updated-alola",
       "species": "garchomp",
       "species_label": "Garchomp",
       "name": "garchomp-mega",
@@ -5170,6 +5608,7 @@
     },
     {
       "dex_number": 309,
+      "source_pokedex": "updated-alola",
       "species": "garchomp",
       "species_label": "Garchomp",
       "name": "garchomp-mega-z",
@@ -5182,6 +5621,7 @@
     },
     {
       "dex_number": 310,
+      "source_pokedex": "updated-alola",
       "species": "baltoy",
       "species_label": "Baltoy",
       "name": "baltoy",
@@ -5194,6 +5634,7 @@
     },
     {
       "dex_number": 311,
+      "source_pokedex": "updated-alola",
       "species": "claydol",
       "species_label": "Claydol",
       "name": "claydol",
@@ -5206,6 +5647,7 @@
     },
     {
       "dex_number": 312,
+      "source_pokedex": "updated-alola",
       "species": "golett",
       "species_label": "Golett",
       "name": "golett",
@@ -5218,6 +5660,7 @@
     },
     {
       "dex_number": 313,
+      "source_pokedex": "updated-alola",
       "species": "golurk",
       "species_label": "Golurk",
       "name": "golurk",
@@ -5230,6 +5673,7 @@
     },
     {
       "dex_number": 313,
+      "source_pokedex": "updated-alola",
       "species": "golurk",
       "species_label": "Golurk",
       "name": "golurk-mega",
@@ -5242,6 +5686,7 @@
     },
     {
       "dex_number": 314,
+      "source_pokedex": "updated-alola",
       "species": "klefki",
       "species_label": "Klefki",
       "name": "klefki",
@@ -5254,6 +5699,7 @@
     },
     {
       "dex_number": 315,
+      "source_pokedex": "updated-alola",
       "species": "mimikyu",
       "species_label": "Mimikyu",
       "name": "mimikyu-busted",
@@ -5266,6 +5712,7 @@
     },
     {
       "dex_number": 315,
+      "source_pokedex": "updated-alola",
       "species": "mimikyu",
       "species_label": "Mimikyu",
       "name": "mimikyu-disguised",
@@ -5278,6 +5725,7 @@
     },
     {
       "dex_number": 315,
+      "source_pokedex": "updated-alola",
       "species": "mimikyu",
       "species_label": "Mimikyu",
       "name": "mimikyu-totem-busted",
@@ -5290,6 +5738,7 @@
     },
     {
       "dex_number": 315,
+      "source_pokedex": "updated-alola",
       "species": "mimikyu",
       "species_label": "Mimikyu",
       "name": "mimikyu-totem-disguised",
@@ -5302,6 +5751,7 @@
     },
     {
       "dex_number": 316,
+      "source_pokedex": "updated-alola",
       "species": "shuppet",
       "species_label": "Shuppet",
       "name": "shuppet",
@@ -5314,6 +5764,7 @@
     },
     {
       "dex_number": 317,
+      "source_pokedex": "updated-alola",
       "species": "banette",
       "species_label": "Banette",
       "name": "banette",
@@ -5326,6 +5777,7 @@
     },
     {
       "dex_number": 317,
+      "source_pokedex": "updated-alola",
       "species": "banette",
       "species_label": "Banette",
       "name": "banette-mega",
@@ -5338,6 +5790,7 @@
     },
     {
       "dex_number": 318,
+      "source_pokedex": "updated-alola",
       "species": "frillish",
       "species_label": "Frillish",
       "name": "frillish-male",
@@ -5350,6 +5803,7 @@
     },
     {
       "dex_number": 319,
+      "source_pokedex": "updated-alola",
       "species": "jellicent",
       "species_label": "Jellicent",
       "name": "jellicent-male",
@@ -5362,6 +5816,7 @@
     },
     {
       "dex_number": 320,
+      "source_pokedex": "updated-alola",
       "species": "bruxish",
       "species_label": "Bruxish",
       "name": "bruxish",
@@ -5374,6 +5829,7 @@
     },
     {
       "dex_number": 321,
+      "source_pokedex": "updated-alola",
       "species": "drampa",
       "species_label": "Drampa",
       "name": "drampa",
@@ -5386,6 +5842,7 @@
     },
     {
       "dex_number": 321,
+      "source_pokedex": "updated-alola",
       "species": "drampa",
       "species_label": "Drampa",
       "name": "drampa-mega",
@@ -5398,6 +5855,7 @@
     },
     {
       "dex_number": 322,
+      "source_pokedex": "updated-alola",
       "species": "absol",
       "species_label": "Absol",
       "name": "absol",
@@ -5410,6 +5868,7 @@
     },
     {
       "dex_number": 322,
+      "source_pokedex": "updated-alola",
       "species": "absol",
       "species_label": "Absol",
       "name": "absol-mega",
@@ -5422,6 +5881,7 @@
     },
     {
       "dex_number": 322,
+      "source_pokedex": "updated-alola",
       "species": "absol",
       "species_label": "Absol",
       "name": "absol-mega-z",
@@ -5434,6 +5894,7 @@
     },
     {
       "dex_number": 323,
+      "source_pokedex": "updated-alola",
       "species": "snorunt",
       "species_label": "Snorunt",
       "name": "snorunt",
@@ -5446,6 +5907,7 @@
     },
     {
       "dex_number": 324,
+      "source_pokedex": "updated-alola",
       "species": "glalie",
       "species_label": "Glalie",
       "name": "glalie",
@@ -5458,6 +5920,7 @@
     },
     {
       "dex_number": 324,
+      "source_pokedex": "updated-alola",
       "species": "glalie",
       "species_label": "Glalie",
       "name": "glalie-mega",
@@ -5470,6 +5933,7 @@
     },
     {
       "dex_number": 325,
+      "source_pokedex": "updated-alola",
       "species": "froslass",
       "species_label": "Froslass",
       "name": "froslass",
@@ -5482,6 +5946,7 @@
     },
     {
       "dex_number": 325,
+      "source_pokedex": "updated-alola",
       "species": "froslass",
       "species_label": "Froslass",
       "name": "froslass-mega",
@@ -5494,6 +5959,7 @@
     },
     {
       "dex_number": 326,
+      "source_pokedex": "updated-alola",
       "species": "sneasel",
       "species_label": "Sneasel",
       "name": "sneasel",
@@ -5506,6 +5972,7 @@
     },
     {
       "dex_number": 326,
+      "source_pokedex": "updated-alola",
       "species": "sneasel",
       "species_label": "Sneasel",
       "name": "sneasel-hisui",
@@ -5518,6 +5985,7 @@
     },
     {
       "dex_number": 327,
+      "source_pokedex": "updated-alola",
       "species": "weavile",
       "species_label": "Weavile",
       "name": "weavile",
@@ -5530,6 +5998,7 @@
     },
     {
       "dex_number": 328,
+      "source_pokedex": "updated-alola",
       "species": "sandshrew",
       "species_label": "Sandshrew",
       "name": "sandshrew",
@@ -5542,6 +6011,7 @@
     },
     {
       "dex_number": 328,
+      "source_pokedex": "updated-alola",
       "species": "sandshrew",
       "species_label": "Sandshrew",
       "name": "sandshrew-alola",
@@ -5554,6 +6024,7 @@
     },
     {
       "dex_number": 329,
+      "source_pokedex": "updated-alola",
       "species": "sandslash",
       "species_label": "Sandslash",
       "name": "sandslash",
@@ -5566,6 +6037,7 @@
     },
     {
       "dex_number": 329,
+      "source_pokedex": "updated-alola",
       "species": "sandslash",
       "species_label": "Sandslash",
       "name": "sandslash-alola",
@@ -5578,6 +6050,7 @@
     },
     {
       "dex_number": 330,
+      "source_pokedex": "updated-alola",
       "species": "vulpix",
       "species_label": "Vulpix",
       "name": "vulpix",
@@ -5590,6 +6063,7 @@
     },
     {
       "dex_number": 330,
+      "source_pokedex": "updated-alola",
       "species": "vulpix",
       "species_label": "Vulpix",
       "name": "vulpix-alola",
@@ -5602,6 +6076,7 @@
     },
     {
       "dex_number": 331,
+      "source_pokedex": "updated-alola",
       "species": "ninetales",
       "species_label": "Ninetales",
       "name": "ninetales",
@@ -5614,6 +6089,7 @@
     },
     {
       "dex_number": 331,
+      "source_pokedex": "updated-alola",
       "species": "ninetales",
       "species_label": "Ninetales",
       "name": "ninetales-alola",
@@ -5626,6 +6102,7 @@
     },
     {
       "dex_number": 332,
+      "source_pokedex": "updated-alola",
       "species": "vanillite",
       "species_label": "Vanillite",
       "name": "vanillite",
@@ -5638,6 +6115,7 @@
     },
     {
       "dex_number": 333,
+      "source_pokedex": "updated-alola",
       "species": "vanillish",
       "species_label": "Vanillish",
       "name": "vanillish",
@@ -5650,6 +6128,7 @@
     },
     {
       "dex_number": 334,
+      "source_pokedex": "updated-alola",
       "species": "vanilluxe",
       "species_label": "Vanilluxe",
       "name": "vanilluxe",
@@ -5662,6 +6141,7 @@
     },
     {
       "dex_number": 335,
+      "source_pokedex": "updated-alola",
       "species": "scraggy",
       "species_label": "Scraggy",
       "name": "scraggy",
@@ -5674,6 +6154,7 @@
     },
     {
       "dex_number": 336,
+      "source_pokedex": "updated-alola",
       "species": "scrafty",
       "species_label": "Scrafty",
       "name": "scrafty",
@@ -5686,6 +6167,7 @@
     },
     {
       "dex_number": 336,
+      "source_pokedex": "updated-alola",
       "species": "scrafty",
       "species_label": "Scrafty",
       "name": "scrafty-mega",
@@ -5698,6 +6180,7 @@
     },
     {
       "dex_number": 337,
+      "source_pokedex": "updated-alola",
       "species": "pawniard",
       "species_label": "Pawniard",
       "name": "pawniard",
@@ -5710,6 +6193,7 @@
     },
     {
       "dex_number": 338,
+      "source_pokedex": "updated-alola",
       "species": "bisharp",
       "species_label": "Bisharp",
       "name": "bisharp",
@@ -5722,6 +6206,7 @@
     },
     {
       "dex_number": 339,
+      "source_pokedex": "updated-alola",
       "species": "snubbull",
       "species_label": "Snubbull",
       "name": "snubbull",
@@ -5734,6 +6219,7 @@
     },
     {
       "dex_number": 340,
+      "source_pokedex": "updated-alola",
       "species": "granbull",
       "species_label": "Granbull",
       "name": "granbull",
@@ -5746,6 +6232,7 @@
     },
     {
       "dex_number": 341,
+      "source_pokedex": "updated-alola",
       "species": "shellos",
       "species_label": "Shellos",
       "name": "shellos",
@@ -5758,6 +6245,7 @@
     },
     {
       "dex_number": 342,
+      "source_pokedex": "updated-alola",
       "species": "gastrodon",
       "species_label": "Gastrodon",
       "name": "gastrodon",
@@ -5770,6 +6258,7 @@
     },
     {
       "dex_number": 343,
+      "source_pokedex": "updated-alola",
       "species": "relicanth",
       "species_label": "Relicanth",
       "name": "relicanth",
@@ -5782,6 +6271,7 @@
     },
     {
       "dex_number": 344,
+      "source_pokedex": "updated-alola",
       "species": "dhelmise",
       "species_label": "Dhelmise",
       "name": "dhelmise",
@@ -5794,6 +6284,7 @@
     },
     {
       "dex_number": 345,
+      "source_pokedex": "updated-alola",
       "species": "carvanha",
       "species_label": "Carvanha",
       "name": "carvanha",
@@ -5806,6 +6297,7 @@
     },
     {
       "dex_number": 346,
+      "source_pokedex": "updated-alola",
       "species": "sharpedo",
       "species_label": "Sharpedo",
       "name": "sharpedo",
@@ -5818,6 +6310,7 @@
     },
     {
       "dex_number": 346,
+      "source_pokedex": "updated-alola",
       "species": "sharpedo",
       "species_label": "Sharpedo",
       "name": "sharpedo-mega",
@@ -5830,6 +6323,7 @@
     },
     {
       "dex_number": 347,
+      "source_pokedex": "updated-alola",
       "species": "skrelp",
       "species_label": "Skrelp",
       "name": "skrelp",
@@ -5842,6 +6336,7 @@
     },
     {
       "dex_number": 348,
+      "source_pokedex": "updated-alola",
       "species": "dragalge",
       "species_label": "Dragalge",
       "name": "dragalge",
@@ -5854,6 +6349,7 @@
     },
     {
       "dex_number": 348,
+      "source_pokedex": "updated-alola",
       "species": "dragalge",
       "species_label": "Dragalge",
       "name": "dragalge-mega",
@@ -5866,6 +6362,7 @@
     },
     {
       "dex_number": 349,
+      "source_pokedex": "updated-alola",
       "species": "clauncher",
       "species_label": "Clauncher",
       "name": "clauncher",
@@ -5878,6 +6375,7 @@
     },
     {
       "dex_number": 350,
+      "source_pokedex": "updated-alola",
       "species": "clawitzer",
       "species_label": "Clawitzer",
       "name": "clawitzer",
@@ -5890,6 +6388,7 @@
     },
     {
       "dex_number": 351,
+      "source_pokedex": "updated-alola",
       "species": "wailmer",
       "species_label": "Wailmer",
       "name": "wailmer",
@@ -5902,6 +6401,7 @@
     },
     {
       "dex_number": 352,
+      "source_pokedex": "updated-alola",
       "species": "wailord",
       "species_label": "Wailord",
       "name": "wailord",
@@ -5914,6 +6414,7 @@
     },
     {
       "dex_number": 353,
+      "source_pokedex": "updated-alola",
       "species": "lapras",
       "species_label": "Lapras",
       "name": "lapras",
@@ -5926,6 +6427,7 @@
     },
     {
       "dex_number": 353,
+      "source_pokedex": "updated-alola",
       "species": "lapras",
       "species_label": "Lapras",
       "name": "lapras-gmax",
@@ -5938,6 +6440,7 @@
     },
     {
       "dex_number": 354,
+      "source_pokedex": "updated-alola",
       "species": "tropius",
       "species_label": "Tropius",
       "name": "tropius",
@@ -5950,6 +6453,7 @@
     },
     {
       "dex_number": 355,
+      "source_pokedex": "updated-alola",
       "species": "exeggcute",
       "species_label": "Exeggcute",
       "name": "exeggcute",
@@ -5962,6 +6466,7 @@
     },
     {
       "dex_number": 356,
+      "source_pokedex": "updated-alola",
       "species": "exeggutor",
       "species_label": "Exeggutor",
       "name": "exeggutor",
@@ -5974,6 +6479,7 @@
     },
     {
       "dex_number": 356,
+      "source_pokedex": "updated-alola",
       "species": "exeggutor",
       "species_label": "Exeggutor",
       "name": "exeggutor-alola",
@@ -5986,6 +6492,7 @@
     },
     {
       "dex_number": 357,
+      "source_pokedex": "updated-alola",
       "species": "corphish",
       "species_label": "Corphish",
       "name": "corphish",
@@ -5998,6 +6505,7 @@
     },
     {
       "dex_number": 358,
+      "source_pokedex": "updated-alola",
       "species": "crawdaunt",
       "species_label": "Crawdaunt",
       "name": "crawdaunt",
@@ -6010,6 +6518,7 @@
     },
     {
       "dex_number": 359,
+      "source_pokedex": "updated-alola",
       "species": "mienfoo",
       "species_label": "Mienfoo",
       "name": "mienfoo",
@@ -6022,6 +6531,7 @@
     },
     {
       "dex_number": 360,
+      "source_pokedex": "updated-alola",
       "species": "mienshao",
       "species_label": "Mienshao",
       "name": "mienshao",
@@ -6034,6 +6544,7 @@
     },
     {
       "dex_number": 361,
+      "source_pokedex": "updated-alola",
       "species": "jangmo-o",
       "species_label": "Jangmo-o",
       "name": "jangmo-o",
@@ -6046,6 +6557,7 @@
     },
     {
       "dex_number": 362,
+      "source_pokedex": "updated-alola",
       "species": "hakamo-o",
       "species_label": "Hakamo-o",
       "name": "hakamo-o",
@@ -6058,6 +6570,7 @@
     },
     {
       "dex_number": 363,
+      "source_pokedex": "updated-alola",
       "species": "kommo-o",
       "species_label": "Kommo-o",
       "name": "kommo-o",
@@ -6070,6 +6583,7 @@
     },
     {
       "dex_number": 363,
+      "source_pokedex": "updated-alola",
       "species": "kommo-o",
       "species_label": "Kommo-o",
       "name": "kommo-o-totem",
@@ -6082,6 +6596,7 @@
     },
     {
       "dex_number": 364,
+      "source_pokedex": "updated-alola",
       "species": "emolga",
       "species_label": "Emolga",
       "name": "emolga",
@@ -6094,6 +6609,7 @@
     },
     {
       "dex_number": 365,
+      "source_pokedex": "updated-alola",
       "species": "scyther",
       "species_label": "Scyther",
       "name": "scyther",
@@ -6106,6 +6622,7 @@
     },
     {
       "dex_number": 366,
+      "source_pokedex": "updated-alola",
       "species": "scizor",
       "species_label": "Scizor",
       "name": "scizor",
@@ -6118,6 +6635,7 @@
     },
     {
       "dex_number": 366,
+      "source_pokedex": "updated-alola",
       "species": "scizor",
       "species_label": "Scizor",
       "name": "scizor-mega",
@@ -6130,6 +6648,7 @@
     },
     {
       "dex_number": 367,
+      "source_pokedex": "updated-alola",
       "species": "heracross",
       "species_label": "Heracross",
       "name": "heracross",
@@ -6142,6 +6661,7 @@
     },
     {
       "dex_number": 367,
+      "source_pokedex": "updated-alola",
       "species": "heracross",
       "species_label": "Heracross",
       "name": "heracross-mega",
@@ -6154,6 +6674,7 @@
     },
     {
       "dex_number": 368,
+      "source_pokedex": "updated-alola",
       "species": "aipom",
       "species_label": "Aipom",
       "name": "aipom",
@@ -6166,6 +6687,7 @@
     },
     {
       "dex_number": 369,
+      "source_pokedex": "updated-alola",
       "species": "ambipom",
       "species_label": "Ambipom",
       "name": "ambipom",
@@ -6178,6 +6700,7 @@
     },
     {
       "dex_number": 370,
+      "source_pokedex": "updated-alola",
       "species": "litleo",
       "species_label": "Litleo",
       "name": "litleo",
@@ -6190,6 +6713,7 @@
     },
     {
       "dex_number": 371,
+      "source_pokedex": "updated-alola",
       "species": "pyroar",
       "species_label": "Pyroar",
       "name": "pyroar-male",
@@ -6202,6 +6726,7 @@
     },
     {
       "dex_number": 371,
+      "source_pokedex": "updated-alola",
       "species": "pyroar",
       "species_label": "Pyroar",
       "name": "pyroar-mega",
@@ -6214,6 +6739,7 @@
     },
     {
       "dex_number": 372,
+      "source_pokedex": "updated-alola",
       "species": "misdreavus",
       "species_label": "Misdreavus",
       "name": "misdreavus",
@@ -6226,6 +6752,7 @@
     },
     {
       "dex_number": 373,
+      "source_pokedex": "updated-alola",
       "species": "mismagius",
       "species_label": "Mismagius",
       "name": "mismagius",
@@ -6238,6 +6765,7 @@
     },
     {
       "dex_number": 374,
+      "source_pokedex": "updated-alola",
       "species": "druddigon",
       "species_label": "Druddigon",
       "name": "druddigon",
@@ -6250,6 +6778,7 @@
     },
     {
       "dex_number": 375,
+      "source_pokedex": "updated-alola",
       "species": "lickitung",
       "species_label": "Lickitung",
       "name": "lickitung",
@@ -6262,6 +6791,7 @@
     },
     {
       "dex_number": 376,
+      "source_pokedex": "updated-alola",
       "species": "lickilicky",
       "species_label": "Lickilicky",
       "name": "lickilicky",
@@ -6274,6 +6804,7 @@
     },
     {
       "dex_number": 377,
+      "source_pokedex": "updated-alola",
       "species": "riolu",
       "species_label": "Riolu",
       "name": "riolu",
@@ -6286,6 +6817,7 @@
     },
     {
       "dex_number": 378,
+      "source_pokedex": "updated-alola",
       "species": "lucario",
       "species_label": "Lucario",
       "name": "lucario",
@@ -6298,6 +6830,7 @@
     },
     {
       "dex_number": 378,
+      "source_pokedex": "updated-alola",
       "species": "lucario",
       "species_label": "Lucario",
       "name": "lucario-mega",
@@ -6310,6 +6843,7 @@
     },
     {
       "dex_number": 378,
+      "source_pokedex": "updated-alola",
       "species": "lucario",
       "species_label": "Lucario",
       "name": "lucario-mega-z",
@@ -6322,6 +6856,7 @@
     },
     {
       "dex_number": 379,
+      "source_pokedex": "updated-alola",
       "species": "dratini",
       "species_label": "Dratini",
       "name": "dratini",
@@ -6334,6 +6869,7 @@
     },
     {
       "dex_number": 380,
+      "source_pokedex": "updated-alola",
       "species": "dragonair",
       "species_label": "Dragonair",
       "name": "dragonair",
@@ -6346,6 +6882,7 @@
     },
     {
       "dex_number": 381,
+      "source_pokedex": "updated-alola",
       "species": "dragonite",
       "species_label": "Dragonite",
       "name": "dragonite",
@@ -6358,6 +6895,7 @@
     },
     {
       "dex_number": 381,
+      "source_pokedex": "updated-alola",
       "species": "dragonite",
       "species_label": "Dragonite",
       "name": "dragonite-mega",
@@ -6370,6 +6908,7 @@
     },
     {
       "dex_number": 382,
+      "source_pokedex": "updated-alola",
       "species": "aerodactyl",
       "species_label": "Aerodactyl",
       "name": "aerodactyl",
@@ -6382,6 +6921,7 @@
     },
     {
       "dex_number": 382,
+      "source_pokedex": "updated-alola",
       "species": "aerodactyl",
       "species_label": "Aerodactyl",
       "name": "aerodactyl-mega",
@@ -6394,6 +6934,7 @@
     },
     {
       "dex_number": 383,
+      "source_pokedex": "updated-alola",
       "species": "tapu-koko",
       "species_label": "Tapu Koko",
       "name": "tapu-koko",
@@ -6406,6 +6947,7 @@
     },
     {
       "dex_number": 384,
+      "source_pokedex": "updated-alola",
       "species": "tapu-lele",
       "species_label": "Tapu Lele",
       "name": "tapu-lele",
@@ -6418,6 +6960,7 @@
     },
     {
       "dex_number": 385,
+      "source_pokedex": "updated-alola",
       "species": "tapu-bulu",
       "species_label": "Tapu Bulu",
       "name": "tapu-bulu",
@@ -6430,6 +6973,7 @@
     },
     {
       "dex_number": 386,
+      "source_pokedex": "updated-alola",
       "species": "tapu-fini",
       "species_label": "Tapu Fini",
       "name": "tapu-fini",
@@ -6442,6 +6986,7 @@
     },
     {
       "dex_number": 387,
+      "source_pokedex": "updated-alola",
       "species": "cosmog",
       "species_label": "Cosmog",
       "name": "cosmog",
@@ -6454,6 +6999,7 @@
     },
     {
       "dex_number": 388,
+      "source_pokedex": "updated-alola",
       "species": "cosmoem",
       "species_label": "Cosmoem",
       "name": "cosmoem",
@@ -6466,6 +7012,7 @@
     },
     {
       "dex_number": 389,
+      "source_pokedex": "updated-alola",
       "species": "solgaleo",
       "species_label": "Solgaleo",
       "name": "solgaleo",
@@ -6478,6 +7025,7 @@
     },
     {
       "dex_number": 390,
+      "source_pokedex": "updated-alola",
       "species": "lunala",
       "species_label": "Lunala",
       "name": "lunala",
@@ -6490,6 +7038,7 @@
     },
     {
       "dex_number": 391,
+      "source_pokedex": "updated-alola",
       "species": "nihilego",
       "species_label": "Nihilego",
       "name": "nihilego",
@@ -6502,6 +7051,7 @@
     },
     {
       "dex_number": 392,
+      "source_pokedex": "updated-alola",
       "species": "stakataka",
       "species_label": "Stakataka",
       "name": "stakataka",
@@ -6514,6 +7064,7 @@
     },
     {
       "dex_number": 393,
+      "source_pokedex": "updated-alola",
       "species": "blacephalon",
       "species_label": "Blacephalon",
       "name": "blacephalon",
@@ -6526,6 +7077,7 @@
     },
     {
       "dex_number": 394,
+      "source_pokedex": "updated-alola",
       "species": "buzzwole",
       "species_label": "Buzzwole",
       "name": "buzzwole",
@@ -6538,6 +7090,7 @@
     },
     {
       "dex_number": 395,
+      "source_pokedex": "updated-alola",
       "species": "pheromosa",
       "species_label": "Pheromosa",
       "name": "pheromosa",
@@ -6550,6 +7103,7 @@
     },
     {
       "dex_number": 396,
+      "source_pokedex": "updated-alola",
       "species": "xurkitree",
       "species_label": "Xurkitree",
       "name": "xurkitree",
@@ -6562,6 +7116,7 @@
     },
     {
       "dex_number": 397,
+      "source_pokedex": "updated-alola",
       "species": "celesteela",
       "species_label": "Celesteela",
       "name": "celesteela",
@@ -6574,6 +7129,7 @@
     },
     {
       "dex_number": 398,
+      "source_pokedex": "updated-alola",
       "species": "kartana",
       "species_label": "Kartana",
       "name": "kartana",
@@ -6586,6 +7142,7 @@
     },
     {
       "dex_number": 399,
+      "source_pokedex": "updated-alola",
       "species": "guzzlord",
       "species_label": "Guzzlord",
       "name": "guzzlord",
@@ -6598,6 +7155,7 @@
     },
     {
       "dex_number": 400,
+      "source_pokedex": "updated-alola",
       "species": "necrozma",
       "species_label": "Necrozma",
       "name": "necrozma",
@@ -6610,6 +7168,7 @@
     },
     {
       "dex_number": 400,
+      "source_pokedex": "updated-alola",
       "species": "necrozma",
       "species_label": "Necrozma",
       "name": "necrozma-dawn",
@@ -6622,6 +7181,7 @@
     },
     {
       "dex_number": 400,
+      "source_pokedex": "updated-alola",
       "species": "necrozma",
       "species_label": "Necrozma",
       "name": "necrozma-dusk",
@@ -6634,6 +7194,7 @@
     },
     {
       "dex_number": 400,
+      "source_pokedex": "updated-alola",
       "species": "necrozma",
       "species_label": "Necrozma",
       "name": "necrozma-ultra",
@@ -6646,6 +7207,7 @@
     },
     {
       "dex_number": 401,
+      "source_pokedex": "updated-alola",
       "species": "magearna",
       "species_label": "Magearna",
       "name": "magearna",
@@ -6658,6 +7220,7 @@
     },
     {
       "dex_number": 401,
+      "source_pokedex": "updated-alola",
       "species": "magearna",
       "species_label": "Magearna",
       "name": "magearna-mega",
@@ -6670,6 +7233,7 @@
     },
     {
       "dex_number": 401,
+      "source_pokedex": "updated-alola",
       "species": "magearna",
       "species_label": "Magearna",
       "name": "magearna-original",
@@ -6682,6 +7246,7 @@
     },
     {
       "dex_number": 401,
+      "source_pokedex": "updated-alola",
       "species": "magearna",
       "species_label": "Magearna",
       "name": "magearna-original-mega",
@@ -6694,6 +7259,7 @@
     },
     {
       "dex_number": 402,
+      "source_pokedex": "updated-alola",
       "species": "marshadow",
       "species_label": "Marshadow",
       "name": "marshadow",
@@ -6706,6 +7272,7 @@
     },
     {
       "dex_number": 403,
+      "source_pokedex": "updated-alola",
       "species": "zeraora",
       "species_label": "Zeraora",
       "name": "zeraora",
@@ -6718,6 +7285,7 @@
     },
     {
       "dex_number": 403,
+      "source_pokedex": "updated-alola",
       "species": "zeraora",
       "species_label": "Zeraora",
       "name": "zeraora-mega",
