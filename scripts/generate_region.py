@@ -24,7 +24,7 @@ from urllib.request import Request, urlopen
 
 import cv2
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / ".cache" / "pokeapi"
@@ -81,6 +81,40 @@ def slug(value: str) -> str:
     return cleaned or "pokemon"
 
 
+def _english_name(species_record: dict, fallback: str) -> str:
+    return next((entry["name"] for entry in species_record.get("names", [])
+                 if entry.get("language", {}).get("name") == "en"),
+                fallback.replace("-", " ").title())
+
+
+def pokemon_display_name(species_name: str, pokemon_name: str, species_label: str) -> str:
+    """Turn PokeAPI form slugs into readable card names such as ``Ultra Necrozma``."""
+    if pokemon_name == species_name:
+        return species_label
+    suffix = pokemon_name[len(species_name):].strip("-") if pokemon_name.startswith(
+        species_name + "-") else pokemon_name
+    parts = suffix.split("-") if suffix else []
+    regions = {"alola": "Alolan", "galar": "Galarian", "hisui": "Hisuian",
+               "paldea": "Paldean"}
+    region = next((part for part in parts if part in regions), None)
+    if "ultra" in parts:
+        return f"Ultra {species_label}"
+    if "mega" in parts:
+        extra = " X" if "x" in parts else " Y" if "y" in parts else ""
+        return f"Mega {species_label}{extra}"
+    if "gmax" in parts or "gigantamax" in parts:
+        return f"Gigantamax {species_label}"
+    if region:
+        regional = f"{regions[region]} {species_label}"
+        if "totem" in parts:
+            return f"Totem {regional}"
+        extras = [part for part in parts if part not in (region, "totem")]
+        return regional if not extras else f"{regional} {' '.join(extras).title()}"
+    if "totem" in parts:
+        return f"Totem {species_label}"
+    return f"{species_label} {' '.join(parts).title()}"
+
+
 def find_old_silhouette(image: Image.Image) -> np.ndarray:
     """Find the large dark mystery figure on the left, avoiding the question mark and logo."""
     rgb = np.asarray(image.convert("RGB"))
@@ -110,6 +144,90 @@ def clean_background(template: Image.Image) -> Image.Image:
     mask = find_old_silhouette(template)
     cleaned = cv2.inpaint(rgb, mask, 7, cv2.INPAINT_TELEA)
     return Image.fromarray(cleaned, mode="RGB")
+
+
+def remove_question_mark(image: Image.Image) -> Image.Image:
+    """Reconstruct the template's question-mark area for revealed cards.
+
+    The complete symbol includes yellow faces, blue outlines, and a dark drop shadow, so a
+    color-only mask leaves noticeable fragments. This template has the mark at a fixed location;
+    inpaint a slightly wider rectangular patch to remove all layers cleanly. The coordinates and
+    inpaint radius scale with the supplied 480-by-270 template.
+    """
+    rgb = np.asarray(image.convert("RGB"))
+    height, width = rgb.shape[:2]
+    x0, x1 = round(width * 307 / 480), round(width * 391 / 480)
+    y0, y1 = round(height * 43 / 270), round(height * 170 / 270)
+    mask = np.zeros((height, width), dtype=np.uint8)
+    mask[y0:y1, x0:x1] = 255
+    radius = max(7, round(min(width / 480, height / 270) * 40))
+    clean = cv2.inpaint(rgb, mask, radius, cv2.INPAINT_TELEA)
+    return Image.fromarray(clean, mode="RGB")
+
+
+def _name_font(size: int) -> ImageFont.ImageFont:
+    for path in (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    ):
+        if Path(path).is_file():
+            return ImageFont.truetype(path, size)
+    return ImageFont.load_default(size=size)
+
+
+def add_reveal_name(image: Image.Image, name: str) -> Image.Image:
+    """Draw a gold, blue-outlined title where the question mark was, matching the reveal example."""
+    result = image.convert("RGB").copy()
+    draw = ImageDraw.Draw(result)
+    width, height = result.size
+    left, right = round(width * 0.57), round(width * 0.97)
+    top, bottom = round(height * 0.24), round(height * 0.62)
+    max_width, max_height = right - left, bottom - top
+    words = (name or "Pokémon").upper().split()
+
+    chosen = None
+    for size in range(30, 12, -1):
+        font = _name_font(size)
+        stroke = max(2, size // 10)
+        lines = []
+        current = ""
+        for word in words:
+            candidate = f"{current} {word}".strip()
+            box = draw.textbbox((0, 0), candidate, font=font, stroke_width=stroke)
+            if box[2] - box[0] <= max_width or not current:
+                current = candidate
+            else:
+                lines.append(current)
+                current = word
+        if current:
+            lines.append(current)
+        if len(lines) > 2:
+            continue
+        text = "\n".join(lines)
+        box = draw.multiline_textbbox((0, 0), text, font=font, spacing=0,
+                                      stroke_width=stroke)
+        text_width, text_height = box[2] - box[0], box[3] - box[1]
+        if text_width <= max_width and text_height <= max_height:
+            chosen = (font, stroke, text, box, text_width, text_height)
+            break
+    if chosen is None:
+        font = ImageFont.load_default(size=13)
+        stroke, text = 2, "\n".join(words)
+        box = draw.multiline_textbbox((0, 0), text, font=font, spacing=0,
+                                      stroke_width=stroke)
+        chosen = (font, stroke, text, box, box[2] - box[0], box[3] - box[1])
+
+    font, stroke, text, box, text_width, text_height = chosen
+    x = round((left + right - text_width) / 2 - box[0])
+    y = round((top + bottom - text_height) / 2 - box[1])
+    draw.multiline_text((x + 2, y + 2), text, font=font, spacing=0, align="center",
+                        fill=(22, 36, 76), stroke_width=stroke + 2,
+                        stroke_fill=(22, 36, 76))
+    draw.multiline_text((x, y), text, font=font, spacing=0, align="center",
+                        fill=(255, 207, 43), stroke_width=stroke,
+                        stroke_fill=(25, 78, 164))
+    return result
 
 
 def pokemon_art_url(record: dict) -> str | None:
@@ -148,9 +266,10 @@ def crop_and_fit(artwork: Image.Image, canvas_size: tuple[int, int], *,
     return art, position
 
 
-def compose(background: Image.Image, artwork: Image.Image, *, silhouette: bool) -> Image.Image:
-    sprite, position = crop_and_fit(artwork, background.size, silhouette=silhouette)
+def compose(background: Image.Image, artwork: Image.Image, *, silhouette: bool,
+            name: str = "") -> Image.Image:
     result = background.convert("RGBA").copy()
+    sprite, position = crop_and_fit(artwork, background.size, silhouette=silhouette)
     if not silhouette:
         shadow_alpha = sprite.getchannel("A").filter(ImageFilter.GaussianBlur(2.0))
         shadow_alpha = shadow_alpha.point(lambda value: round(value * 0.42))
@@ -158,7 +277,8 @@ def compose(background: Image.Image, artwork: Image.Image, *, silhouette: bool) 
         shadow.putalpha(shadow_alpha)
         result.alpha_composite(shadow, dest=(position[0] + 2, position[1] + 2))
     result.alpha_composite(sprite, dest=position)
-    return result.convert("RGB")
+    rendered = result.convert("RGB")
+    return add_reveal_name(rendered, name) if not silhouette else rendered
 
 
 def _save_jpeg(image: Image.Image, path: Path) -> None:
@@ -172,8 +292,8 @@ def _pokemon_details(form: dict, *, refresh: bool) -> dict:
     return get_json(url, refresh=refresh)
 
 
-def _generate_form(form: dict, background: Image.Image, region_dir: Path,
-                   *, refresh: bool) -> dict:
+def _generate_form(form: dict, background: Image.Image, reveal_background: Image.Image,
+                   region_dir: Path, *, refresh: bool) -> dict:
     name = form["name"]
     details = _pokemon_details(form, refresh=refresh)
     sprite_url = pokemon_art_url(details)
@@ -185,7 +305,8 @@ def _generate_form(form: dict, background: Image.Image, region_dir: Path,
     silhouette_path = region_dir / "silhouettes" / f"{stem}.jpg"
     revealed_path = region_dir / "revealed" / f"{stem}.jpg"
     _save_jpeg(compose(background, artwork, silhouette=True), silhouette_path)
-    _save_jpeg(compose(background, artwork, silhouette=False), revealed_path)
+    _save_jpeg(compose(reveal_background, artwork, silhouette=False,
+                       name=form["display_name"]), revealed_path)
     return {
         **form,
         "status": "generated",
@@ -218,6 +339,7 @@ def list_forms(region: str, *, workers: int, refresh: bool) -> tuple[dict, list[
     forms = []
     seen = set()
     for dex_number, species_name, record in species_data:
+        species_label = _english_name(record, species_name)
         for variety in record.get("varieties", []):
             pokemon = variety["pokemon"]
             pokemon_name = pokemon["name"]
@@ -227,7 +349,9 @@ def list_forms(region: str, *, workers: int, refresh: bool) -> tuple[dict, list[
             forms.append({
                 "dex_number": dex_number,
                 "species": species_name,
+                "species_label": species_label,
                 "name": pokemon_name,
+                "display_name": pokemon_display_name(species_name, pokemon_name, species_label),
                 "is_default": bool(variety.get("is_default")),
             })
     return pokedex, forms
@@ -240,6 +364,7 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
     region_dir = ROOT / "regions" / region
     image = Image.open(template_path).convert("RGB")
     background = clean_background(image)
+    reveal_background = remove_question_mark(background)
     pokedex, forms = list_forms(region, workers=workers, refresh=refresh)
     if limit is not None:
         forms = forms[:max(0, limit)]
@@ -249,8 +374,8 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
     results = []
     completed = 0
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(_generate_form, form, background, region_dir,
-                                  refresh=refresh): form for form in forms}
+        futures = {executor.submit(_generate_form, form, background, reveal_background,
+                                  region_dir, refresh=refresh): form for form in forms}
         for future in as_completed(futures):
             form = futures[future]
             try:
@@ -283,8 +408,9 @@ def generate(region: str, template_path: Path, *, workers: int = 8,
         f"({manifest['species_count']} entries).\n\n"
         f"The generator expands every listed species to all PokeAPI varieties. It rendered "
         f"{manifest['generated_count']} forms as paired images in `silhouettes/` and `revealed/`. "
-        f"This includes Alolan forms and battle forms such as Ultra Necrozma when PokeAPI provides "
-        f"official artwork. See `manifest.json` for each file and source URL.\n\n"
+        f"Each revealed image replaces the question mark with the Pokémon/form name. This includes "
+        f"Alolan forms and battle forms such as Ultra Necrozma when PokeAPI provides official "
+        f"artwork. See `manifest.json` for each file and source URL.\n\n"
         "Pokémon names and artwork are the property of their respective rights holders; artwork "
         "is fetched from PokeAPI's sprite data.\n",
         encoding="utf-8")

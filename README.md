@@ -1,7 +1,8 @@
 # Who Is That Pokémon?
 
 A region-organized collection of Pokémon quiz cards. Each form gets a pair of images using the same
-background: a black silhouette and the revealed PokeAPI official-artwork sprite.
+background: a black silhouette and the revealed PokeAPI official-artwork sprite. Revealed cards replace
+the question mark with the Pokémon/form name in gold text with a blue outline.
 
 ## Current build
 
